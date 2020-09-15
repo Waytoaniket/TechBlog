@@ -1,341 +1,236 @@
+{% extends 'basic.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <title>VedantTechBlog</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script> 
-    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-</head>
-<body>
-    <section>
-        <!-- navigation bar -->
-        <nav>
-            <div class="nav-top">
-            <!-- logo -->
-            <a href="#" class="logo">SKRI11</a>
-            <ul>
-                <li>
-                    <div class="search-bar">
-                        <input type="text" name="" class="search-txt" placeholder="Search..."/>
-                        <a class="search-btn">
-                            <img src="{% static 'search.png' %} " style="width: 100%; transform:rotate(10deg)" />
-                        </a>
-                    </div>
-                </li>
-                <li><a href="">
-                    <img id='cart-icon' src="{% static 'cart.jpg' %}" />
-                    </a>
-                </li>
-                <li><a href="#" class="">Account</a></li>
-               
-            </ul>
-            </div>
-            <!-- menu -->
-            <div class="nav-bottom">
-            <ul>
-                <li><a href="#" class="nav-active">HOME</a></li>
-                <li><a href="#" class="">SHOP</a></li>
-                <li><a href="#" class="">GAMING SETUP</a></li>
-                <li><a href="#" class="">VIDEOS</a></li>
-                <li><a href="#" class="">CAMERA GEAR</a></li>
-                <li><a href="#" class="">CONTACT US</a></li>
-            </ul>
-            </div>
-        </nav>
-        <!-- -----------------slideshow------------------ -->
-        <div class="slideshow-container">
+{% block title %} VedantTechBlog {% endblock %}
 
-            <div class="mySlides fade">
-              <img src="{% static 'slide1.jpg' %}" style="width:100%; object-fit: cover; height: 600px;">
-            </div>
-            
-            <div class="mySlides fade">
-              <img src="{% static 'slide2.jpg' %}" style="width:100%; object-fit: cover;  height: 600px;">
-            </div>
-            
-            <div class="mySlides fade">
-              <img src="{% static 'slide3.jpg' %}" style="width:100%;object-fit: cover;  height: 600px;">
-            </div>
-            <div style="text-align:center;margin-top: -2%;">
-              <span class="dot"></span> 
-              <span class="dot"></span> 
-              <span class="dot"></span> 
-            </div>
-            
-            </div>
-            <!-- --------------Jambo card------------- -->
-            <div class="jambo-box">
-                <div class="jambo-img">
-                  <a href="#"><img src="{% static 'jambo1.jpg' %}" style="width:100%;height: 100%;"></a>
+{% block body %} 
 
-                </div>
-                <div class="jambo-text-btn">
-                    <ul>
-                        <li><a href="#">GAMING SETUP</a></li>
-                        <li><button class="jambo-btn">Visit Page</button></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="jambo-box">
-              <div class="jambo-img">
-                <a href="#"><img src="{% static 'jambo2.jpg' %}" style="width:100%;height: 100%;"></a>
-              </div>
-              <div class="jambo-text-btn">
-                  <ul>
-                      <li><a href="#">PC BUILD</a></li>
-                      <li><button class="jambo-btn">Visit Page</button></li>
-                  </ul>
-              </div>
-              </div><div class="jambo-box">
-                <div class="jambo-img">
-                  <a href="#"><img src="{% static 'jambo3.jpg' %}" style="width:100%;height: 100%;"></a>
-                </div>
-                <div class="jambo-text-btn">
-                    <ul>
-                        <li><a href="#">RACING SIM</a></li>
-                        <li><button class="jambo-btn">Visit Page</button></li>
-                    </ul>
-                </div>
-            </div><div class="jambo-box">
-              <div class="jambo-img">
-                <a href="#"><img src="{% static 'jambo4.jpg' %}" style="width:100%;height: 100%;"></a>
-              </div>
-              <div class="jambo-text-btn">
-                  <ul>
-                      <li><a href="#">ACCESSORIES</a></li>
-                      <li><button class="jambo-btn">Visit Page</button></li>
-                  </ul>
-              </div>
-          </div>
-          <!-- --------------------Videos sections----------  -->
-          <div class="video-sec">
-            <div class="video-heading">
-              <a href="">VIDEOS</a>
-            </div>
-            <div class="video-box">
-              <div class="video-img">
-                <ul>
-                  <li><a href="#"><img src="{% static 'video1.jpg' %}" style="width:100%;height: 100%;"></a></li>
-                  <li>FABULOUS EXPERIENCE AFTER NEW PC BUILD</li>
-                </ul>
-              </div>
-              <div class="video-img">
-                <ul>
-                  <li><a href="#"><img src="{% static 'video2.jpg' %}" style="width:100%;height: 100%;"></a></li>
-                  <li>AMAZING SPEAKER SENT BY LOGITECH</li>
-                </ul>
-              </div>
-              <div class="video-img">
-                <ul>
-                  <li><a href="#"><img src="{% static 'video3.jpg' %}" style="width:100%;height: 100%;"></a></li>
-                  <li>HANDY AND EASY TO PLAY WITH THIS JOYSTICK</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <!-- ------------------shopping------------------- -->
-          <div class="shopping-box">
-            <div class="shopping-shop">
-              SKRILL SHOP
-            </div>
-            <div class="shopping-visit">
-                VISIT PAGE
-            </div>
-          </div>
-          <div class="shopping-card-box">
-            <div class="shopping-card">
-              <ul>
-                <li><a href="#"><img src="{% static 'shop1.png' %}" style="width:70%;height: 90%;margin-block-start: 3%;margin-inline-start: 15%;"></a></li>
-                <li>copy right</li>
-                <li>$244</li>
-              </ul>
-            </div>
-            <div class="shopping-card">
-              <ul>
-                <li><a href="#"><img src="{% static 'jambo4.jpg' %}" style="width:100%;height: 100%;"></a></li>
-                <li>copy right</li>
-                <li>$542</li>
-              </ul>
-            </div><div class="shopping-card">
-              <ul>
-                <li><a href="#"><img src="{% static 'jambo4.jpg' %}" style="width:100%;height: 100%;"></a></li>
-                <li>copy right</li>
-                <li>$112</li>
-              </ul>
-            </div><div class="shopping-card">
-              <ul>
-                <li><a href="#"><img src="{% static 'jambo4.jpg' %}" style="width:100%;height: 100%;"></a></li>
-                <li>copy right</li>
-                <li>$201</li>
-              </ul>
-            </div>
-          </div>
-          <!-- --------------------FAQ Section--------------------- -->
-          <div class="faq-sec">
-            <div class="shopping-logo">
-              <a href=""><img class="shopping-img" src="{% static 'ShoppingLogo.jpg' %}" ></a>
-            </div>
-            <div class="faq">
-              <ul>
-                <li class="faq-head"><a href="" class="font3">FAQ</a></li>
-                <li>
-                  <div class="faq-que">
-                    <span>When will i ge my order?</span>
-                    <i class='fas fa-angle-right' id="rotate" style='font-size:24px'></i>
-                  </div>
-                  <div class="faq-ans">
-                    <div class="font1">It usually takes 3-7 days to fulfil an order, after it's shipped out. The shipping time depends on your location, but can be estimated as follows:</div>
-                    <ul>
-                      <li class="font1">USA: 3-4 business days</li>
-                      <li class="font1">UK: 2-5 business days</li>
-                      <li class="font1"> Europe: 3-10 business days</li>
-                      <li class="font1">International: 10-20 business days</li>
-                    </ul>
-                  </div>
-                  
-                  <div class="faq-que">
-                    <span>How can i track my package?</span>
-                    <i class='fas fa-angle-right' id="rotate" style='font-size:24px'></i>
-                  </div>
-                  <div class="faq-ans">
-                    <div class="font1">Every order placed on our store is trackable! When your order ships out, you'll receive an email with an order tracking link. We even offer order tracking via Facebook Messenger! </div>
-                  </div>
-                  
-                  <div class="faq-que">
-                    <span>How are your product made?</span>
-                    <i class='fas fa-angle-right' id="rotate" style='font-size:24px'></i>
-                  </div>
-                  <div class="faq-ans">
-                    <div class="font1">We work with a high-quality print-on-demand order fulfilment company that has locations worldwide. All of our T-Shirts (excluding oversized tees) are made in the USA.
-                    </div>
-                  </div>
-                  
-                  <div class="faq-que">
-                    <span>Do you offer refunds,returns or exchange?</span>
-                    <i class='fas fa-angle-right' id="rotate" style='font-size:24px'></i>
-                  </div>
-                  <div class="faq-ans">
-                    <div class="font1">
-                      At this time, we do not offer returns or exchanges. However, if there is something wrong with your order and you receive the wrong or damaged items. Please email us at support@techblock.co.uk within a weeks' time with photos of the damaged product, your order number, and any other details you may have about your order. We’ll get back to you with a resolution as soon as possible! 
-                    </div>
-                    <ul>
-                      <li class="font1">Refunds are only issued to customers that receive wrong or damaged items.</li>
-                    </ul>
-                  </div>
+<!-- -----------------slideshow------------------ -->
+<div class="slideshow-container">
 
-                  <div class="faq-que">
-                    <span>Wher can i find product sizing information?</span>
-                    <i class='fas fa-angle-right' id="rotate" style='font-size:24px'></i>
-                  </div>
-                  <div class="faq-ans">
-                    <div class="font1">
-                      Please refer to our sizing guides that can be found in the product description section.
-                    </div>
-                  </div>
-                  
-                </li>
-              </ul>
-            </div>
-          </div> 
-    </section>
-    <!-- --------------------some information--------------- -->
-    <div class="delivery-box">
-      <div class="delivery-inside-box">
-        <ul>
-          <li class="font4"> <i class='fa fa-truck' style='font-size:28px;  -webkit-transform: scaleX(-1);
-            transform: scaleX(-1);'></i> Fast Delivery</li>
-          <li class="font1" style="text-align: center; font-size: 14px; font-weight: bold;">to India,USA & UK</li>
-        </ul>
-      </div>
-      <div class="delivery-inside-box">
-        <ul>
-          <li class="font4"> <i class='fa fa-check' style='font-size:28px;'></i> Tracked Oders</li>
-          <li class="font1" style="text-align: center; font-size: 14px; font-weight: bold;">Easily keep track of your order</li>
-        </ul>
-      </div>
-      <div class="delivery-inside-box">
-        <ul>
-          <li class="font4"> <i class='fa fa-toggle-on' style='font-size:28px; '></i> Free Shipping</li>
-          <li class="font1" style="text-align: center; font-size: 14px; font-weight: bold;">Free worldwide shipping</li>
-        </ul>
-      </div>
+    <div class="mySlides fade">
+      <img src="{% static 'slide1.jpg' %}" style="width:100%; object-fit: cover; height: 600px;">
     </div>
-
-    <!-- ----------------------------footer------------------------- -->
-
-    <div class="footer">
-      <div class="footer-box">
+    
+    <div class="mySlides fade">
+      <img src="{% static 'slide2.jpg' %}" style="width:100%; object-fit: cover;  height: 600px;">
+    </div>
+    
+    <div class="mySlides fade">
+      <img src="{% static 'slide3.jpg' %}" style="width:100%;object-fit: cover;  height: 600px;">
+    </div>
+    <div style="text-align:center;margin-top: -2%;">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+    </div>
+    
+</div>
+    <!-- --------------Jambo card------------- -->
+<div class="jambo-box">
+    <div class="jambo-img">
+      <a href="#"><img src="{% static 'jambo1.jpg' %}" style="width:100%;height: 100%;"></a>
+    </div>
+    <div class="jambo-text-btn">
         <ul>
-          <li class="footer-heading font3" style="font-weight: 500; font-size: 23px;"> DISCLOSURE</li>
-          <li class="font1" style="color: rgba(255,255,255,0.6);">TechBlock is a participant in the Amazon Associates Programme, an affiliate program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.</li>
+            <li><a href="#">GAMING SETUP</a></li>
+            <li><button class="jambo-btn">Visit Page</button></li>
         </ul>
-      </div>
-      <div class="footer-box">
+    </div>
+</div>
+<div class="jambo-box">
+  <div class="jambo-img">
+    <a href="#"><img src="{% static 'jambo2.jpg' %}" style="width:100%;height: 100%;"></a>
+  </div>
+  <div class="jambo-text-btn">
+      <ul>
+          <li><a href="#">PC BUILD</a></li>
+          <li><button class="jambo-btn">Visit Page</button></li>
+      </ul>
+  </div>
+</div>
+<div class="jambo-box">
+    <div class="jambo-img">
+      <a href="#"><img src="{% static 'jambo3.jpg' %}" style="width:100%;height: 100%;"></a>
+    </div>
+    <div class="jambo-text-btn">
         <ul>
-          <li class="footer-heading font3 social-media" style="font-weight: 500; font-size: 23px;"> FOLLOW ME</li>
-          <li>
-            <ul class=" social-media">
-              <li><i class="fab fa-facebook-f" style="font-size:25px; color:grey;"></i></li>
-              <li><i class="fab fa-twitter" style="font-size:25px; color:grey;"></i></li>
-              <li><i class="fab fa-instagram" style="font-size:25px; color:grey;"></i></li>
-              <li><i class="fab fa-youtube" style="font-size:25px; color:grey;"></i></li>
-            </ul>
-          </li>
+            <li><a href="#">RACING SIM</a></li>
+            <li><button class="jambo-btn">Visit Page</button></li>
         </ul>
-      </div>
-      <div class="footer-box">
-        <ul>
-          <li class="footer-heading font3" style="font-weight: 500; font-size: 23px;">BE IN THE KNOW</li>
-          <li class="font1" style="line-height: 150%; color: rgba(255,255,255,0.6);">Sign up for exclusive discounts & offers!</li>
-          <li>
-            <div class="footer-wrap">
-              <div class="footer-search">
-                 <input type="text" class="footer-searchTerm" placeholder="Enter Your Email">
-                 <button type="submit" class="footer-searchButton">
-                   <i class="fa fa-angle-right"></i>
-                </button>
-              </div>
-           </div>
-          </li>
+    </div>
+</div>
+<div class="jambo-box">
+  <div class="jambo-img">
+    <a href="#"><img src="{% static 'jambo4.jpg' %}" style="width:100%;height: 100%;"></a>
+  </div>
+  <div class="jambo-text-btn">
+      <ul>
+          <li><a href="#">ACCESSORIES</a></li>
+          <li><button class="jambo-btn">Visit Page</button></li>
+      </ul>
+  </div>
+</div>
+  <!-- --------------------Videos sections----------  -->
+<div class="video-sec">
+  <div class="video-heading">
+    <a href="">VIDEOS</a>
+  </div>
+  <div class="video-box">
+    <div class="video-img">
+      <ul>
+        <li><a href="#"><img src="{% static 'video5.jpg' %}" style="width:100%;height: 100%;"></a></li>
+        <li>FABULOUS EXPERIENCE AFTER NEW PC BUILD</li>
+      </ul>
+    </div>
+    <div class="video-img">
+      <ul>
+        <li><a href="#"><img src="{% static 'video7.jpg' %}" style="width:100%;height: 100%;"></a></li>
+        <li>AMAZING SPEAKER SENT BY LOGITECH</li>
+      </ul>
+    </div>
+    <div class="video-img">
+      <ul>
+        <li><a href="#"><img src="{% static 'video8.jpg' %}" style="width:100%;height: 100%;"></a></li>
+        <li>HANDY AND EASY TO PLAY WITH THIS JOYSTICK</li>
+      </ul>
+    </div>
+  </div>
+</div>
+  <!-- ------------------shopping------------------- -->
+<div class="shopping-box">
+  <div class="shopping-shop">
+    SKRILL SHOP
+  </div>
+  <div class="shopping-visit">
+      VISIT PAGE
+  </div>
+</div>
+<div class="shopping-card-box">
+  <div class="shopping-card">
+    <ul>
+      <li><a href="#"><img src="{% static 'shirt1.png' %}" style="width:100%;height: 100%;"></a></li>
+      <li>copy right</li>
+      <li>$244</li>
+    </ul>
+  </div>
+  <div class="shopping-card">
+    <ul>
+      <li><a href="#"><img src="{% static 'shirt6.png' %}" style="width:100%;height: 100%;"></a></li>
+      <li>copy right</li>
+      <li>$542</li>
+    </ul>
+  </div><div class="shopping-card">
+    <ul>
+      <li><a href="#"><img src="{% static 'shirt3.png' %}" style="width:100%;height: 100%;"></a></li>
+      <li>copy right</li>
+      <li>$112</li>
+    </ul>
+  </div><div class="shopping-card">
+    <ul>
+      <li><a href="#"><img src="{% static 'shirt4.png' %}" style="width:100%;height: 100%;"></a></li>
+      <li>copy right</li>
+      <li>$201</li>
+    </ul>
+  </div>
+</div>
+  <!-- --------------------FAQ Section--------------------- -->
+<div class="faq-sec">
+  <div class="shopping-logo">
+    <a href=""><img class="shopping-img" src="{% static 'ShoppingLogo.jpg' %}" ></a>
+  </div>
+  <div class="faq">
+    <ul>
+      <li class="faq-head"><a href="" class="font3">FAQ</a></li>
+      <li>
+        <div class="faq-que">
+          <span>When will i ge my order?</span>
+          <i class='fas fa-angle-right' id="rotate" style='font-size:24px'></i>
+        </div>
+        <div class="faq-ans">
+          <div class="font1">It usually takes 3-7 days to fulfil an order, after it's shipped out. The shipping time depends on your location, but can be estimated as follows:</div>
+          <ul>
+            <li class="font1">USA: 3-4 business days</li>
+            <li class="font1">UK: 2-5 business days</li>
+            <li class="font1"> Europe: 3-10 business days</li>
+            <li class="font1">International: 10-20 business days</li>
           </ul>
-      </div>
-      <div class="footer-box">
-        <ul>
-          <li class="footer-heading font3" style="font-weight: 500; font-size: 23px;"> HELP & INFO</li>
-          <li ><a href="#"class="font1" style="line-height: 150%; color: rgba(255,255,255,0.6);" >FAQ</a></li>
-          <li ><a href="#"class="font1" style="line-height: 150%; color: rgba(255,255,255,0.6);">Privacy Policy</a></li>
-          <li ><a href="#"class="font1" style="line-height: 150%; color: rgba(255,255,255,0.6);">Return & Refund Policy</a></li>
-          <li ><a href="#"class="font1" style="line-height: 150%; color: rgba(255,255,255,0.6);" >Cookies Policy</a></li>
-        </ul>
-      </div>
+        </div>
+        
+        <div class="faq-que">
+          <span>How can i track my package?</span>
+          <i class='fas fa-angle-right' id="rotate" style='font-size:24px'></i>
+        </div>
+        <div class="faq-ans">
+          <div class="font1">Every order placed on our store is trackable! When your order ships out, you'll receive an email with an order tracking link. We even offer order tracking via Facebook Messenger! </div>
+        </div>
+        
+        <div class="faq-que">
+          <span>How are your product made?</span>
+          <i class='fas fa-angle-right' id="rotate" style='font-size:24px'></i>
+        </div>
+        <div class="faq-ans">
+          <div class="font1">We work with a high-quality print-on-demand order fulfilment company that has locations worldwide. All of our T-Shirts (excluding oversized tees) are made in the USA.
+          </div>
+        </div>
+        
+        <div class="faq-que">
+          <span>Do you offer refunds,returns or exchange?</span>
+          <i class='fas fa-angle-right' id="rotate" style='font-size:24px'></i>
+        </div>
+        <div class="faq-ans">
+          <div class="font1">
+            At this time, we do not offer returns or exchanges. However, if there is something wrong with your order and you receive the wrong or damaged items. Please email us at support@techblock.co.uk within a weeks' time with photos of the damaged product, your order number, and any other details you may have about your order. We’ll get back to you with a resolution as soon as possible! 
+          </div>
+          <ul>
+            <li class="font1">Refunds are only issued to customers that receive wrong or damaged items.</li>
+          </ul>
+        </div>
+
+        <div class="faq-que">
+          <span>Wher can i find product sizing information?</span>
+          <i class='fas fa-angle-right' id="rotate" style='font-size:24px'></i>
+        </div>
+        <div class="faq-ans">
+          <div class="font1">
+            Please refer to our sizing guides that can be found in the product description section.
+          </div>
+        </div>
+        
+      </li>
+    </ul>
+  </div>
+</div> 
+
+{% endblock %}
+
+{% block afterbody %} 
+
+<div class="delivery-box">
+    <div class="delivery-inside-box">
+      <ul>
+        <li class="font4"> <i class='fa fa-truck' style='font-size:28px;  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);'></i> Fast Delivery</li>
+        <li class="font1" style="text-align: center; font-size: 14px; font-weight: bold;">to India,USA & UK</li>
+      </ul>
     </div>
-<!-- ==================powered by========== -->
-
-    <div class="poweredby">
-      <div class="poweredby-box">
-        © 2020, TechBlock. Powered by Shopify
-      </div>
-      <div class="poweredby-box">
-        <ul>
-          <li><span class="iconify" data-icon="logos:visa" data-inline="false" ></span></li>
-          <li><span class="iconify" data-icon="logos:google-pay" data-inline="false" ></span></li>
-          <li><span class="iconify" data-icon="logos:mastercard" data-inline="false"></span></li>
-          <li><span class="iconify" data-icon="logos:apple-pay" data-inline="false" ></span></li>
-          <li><span class="iconify" data-icon="logos:paypal" data-inline="false" ></span></li>
-          <li><span class="iconify" data-icon="la:amazon-pay" data-inline="false" style="color:black; font-size: 165%; "></span></li>
-        </ul>
-
-      </div>
+    <div class="delivery-inside-box">
+      <ul>
+        <li class="font4"> <i class='fa fa-check' style='font-size:28px;'></i> Tracked Oders</li>
+        <li class="font1" style="text-align: center; font-size: 14px; font-weight: bold;">Easily keep track of your order</li>
+      </ul>
     </div>
+    <div class="delivery-inside-box">
+      <ul>
+        <li class="font4"> <i class='fa fa-toggle-on' style='font-size:28px; '></i> Free Shipping</li>
+        <li class="font1" style="text-align: center; font-size: 14px; font-weight: bold;">Free worldwide shipping</li>
+      </ul>
+    </div>
+  </div>
 
+{% endblock %}
 
+{% block javascript %} 
 
-</body>
 <script>
     var slideIndex = 0;
     showSlides();
@@ -354,8 +249,10 @@
       }
       slides[slideIndex-1].style.display = "block";  
       dots[slideIndex-1].className += " active";
-      setTimeout(showSlides, 3000); // Change image every 2 seconds
+      setTimeout(showSlides, 3000); // Change image every 3 seconds
     }
-    </script>
-    
-</html>
+
+   
+</script>
+
+{% endblock %}

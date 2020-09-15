@@ -1,0 +1,126 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script> 
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body>
+    <section>
+        <!-- navigation bar -->
+        <nav>
+            <div class="nav-top">
+            <!-- logo -->
+            <a href="#" class="logo">SKRI11</a>
+            <ul>
+                <li>
+                    <div class="search-bar">
+                        <input type="text" name="" class="search-txt" placeholder="Search..."/>
+                        <a class="search-btn">
+                            <img src="{% static 'search.png' %} " style="width: 100%; transform:rotate(10deg)" />
+                        </a>
+                    </div>
+                </li>
+                <li><a href="">
+                    <img id='cart-icon' src="{% static 'cart.jpg' %}" />
+                    </a>
+                </li>
+                <li><a href="#" class="">Account</a></li>
+               
+            </ul>
+          </div>
+            <!-- menu -->
+            <div class="nav-bottom">
+            <ul>
+                <li><a href="/"  class="nav-active">HOME</a></li>
+                <li><a href="shop" class="">SHOP</a></li>
+                <li><a href="#" class="">GAMING SETUP</a></li>
+                <li><a href="video" class="">VIDEOS</a></li>
+                <li><a href="#" class="">CONTACT US</a></li>
+            </ul>
+          </div>
+        </nav> 
+        {% block body %} {% endblock %}
+    </section>
+    <!-- --------------------some information--------------- -->
+    {% block afterbody %} {% endblock %}
+    <!-- ----------------------------footer------------------------- -->
+
+    <div class="footer">
+      <div class="footer-box">
+        <ul>
+          <li class="footer-heading font3" style="font-weight: 500; font-size: 23px;"> DISCLOSURE</li>
+          <li class="font1" style="color: rgba(255,255,255,0.6);">TechBlock is a participant in the Amazon Associates Programme, an affiliate program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.</li>
+        </ul>
+      </div>
+      <div class="footer-box">
+        <ul>
+          <li class="footer-heading font3 social-media" style="font-weight: 500; font-size: 23px;"> FOLLOW ME</li>
+          <li>
+            <ul class=" social-media">
+              <li><i class="fab fa-facebook-f" style="font-size:25px; color:grey;"></i></li>
+              <li><i class="fab fa-twitter" style="font-size:25px; color:grey;"></i></li>
+              <li><i class="fab fa-instagram" style="font-size:25px; color:grey;"></i></li>
+              <li><i class="fab fa-youtube" style="font-size:25px; color:grey;"></i></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-box">
+        <ul>
+          <li class="footer-heading font3" style="font-weight: 500; font-size: 23px;">BE IN THE KNOW</li>
+          <li class="font1" style="line-height: 150%; color: rgba(255,255,255,0.6);">Sign up for exclusive discounts & offers!</li>
+          <li>
+            <div class="footer-wrap">
+              <div class="footer-search">
+                 <input type="text" class="footer-searchTerm" placeholder="Enter Your Email">
+                 <button type="submit" class="footer-searchButton">
+                   <i class="fa fa-angle-right"></i>
+                </button>
+              </div>
+           </div>
+          </li>
+          </ul>
+      </div>
+      <div class="footer-box">
+        <ul>
+          <li class="footer-heading font3" style="font-weight: 500; font-size: 23px;"> HELP & INFO</li>
+          <li ><a href="#"class="font1" style="line-height: 150%; color: rgba(255,255,255,0.6);" >FAQ</a></li>
+          <li ><a href="#"class="font1" style="line-height: 150%; color: rgba(255,255,255,0.6);">Privacy Policy</a></li>
+          <li ><a href="#"class="font1" style="line-height: 150%; color: rgba(255,255,255,0.6);">Return & Refund Policy</a></li>
+          <li ><a href="#"class="font1" style="line-height: 150%; color: rgba(255,255,255,0.6);" >Cookies Policy</a></li>
+        </ul>
+      </div>
+    </div>
+<!-- ==================powered by========== -->
+
+    <div class="poweredby">
+      <div class="poweredby-box">
+        © 2020, TechBlock. Powered by Shopify
+      </div>
+      <div class="poweredby-box">
+        <ul>
+          <li><span class="iconify" data-icon="logos:visa" data-inline="false" ></span></li>
+          <li><span class="iconify" data-icon="logos:google-pay" data-inline="false" ></span></li>
+          <li><span class="iconify" data-icon="logos:mastercard" data-inline="false"></span></li>
+          <li><span class="iconify" data-icon="logos:apple-pay" data-inline="false" ></span></li>
+          <li><span class="iconify" data-icon="logos:paypal" data-inline="false" ></span></li>
+          <li><span class="iconify" data-icon="la:amazon-pay" data-inline="false" style="color:black; font-size: 165%; "></span></li>
+        </ul>
+
+      </div>
+    </div>
+
+
+
+</body>
+  
+  {% block javascript %} {% endblock %}
+    
+</html>

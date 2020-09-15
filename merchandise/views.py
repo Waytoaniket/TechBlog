@@ -1,5 +1,11 @@
 from django.shortcuts import render,HttpResponse
 
 # Create your views here.
-def index(request):
+def homepage(request):
     return render(request,'home.html')
+
+def shoppage(request):
+    return render(request,'shop.html')
+
+def videopage(request):
+    return render(request,'videos.html')
