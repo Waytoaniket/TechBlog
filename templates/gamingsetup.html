@@ -1,0 +1,251 @@
+{% extends 'basic.html' %}
+{% load static %}
+{% block title %} VedantTechBlog {% endblock %}
+
+{% block nav-bottom %} 
+
+<div class="nav-bottom">
+    <ul>
+      <li class="animate-grow"><a href="/"  onclick="changeActive()">HOME</a></li>
+      <li class="animate-grow"><a href="shop" onclick="changeActive()">SHOP</a></li>
+      <li class="animate-grow nav-active"><a href="gaming-setup" onclick="changeActive()">GAMING SETUP</a></li>
+      <li class="animate-grow"><a href="video" onclick="changeActive()">VIDEOS</a></li>
+      <li class="animate-grow"><a href="#" onclick="changeActive()">CONTACT US</a></li>
+    </ul>
+  </div>
+
+{% endblock %}
+
+
+{% block body %} 
+
+<div class="gaming-head-box">
+    <div class="gaming-head animate-grow">
+        <a href="">GAMING SETUP</a>
+    </div> 
+    <div class="gaming-head animate-grow">
+        <a href="">CUSTOM PC BUILD</a>
+       
+    </div>
+    <div class="gaming-head animate-grow">
+        <a href="">RACING SIMULATOR</a>
+    </div> 
+    <div class="gaming-head animate-grow">
+        <a href="">ACCESSORIES</a>
+    </div>
+</div>
+<div class="gaming-disclosure">
+    FTC DISCLOSURE: We may earn a commission when you use one of our coupons/links to make a purchase.  
+</div>
+<div class="gaming-section">
+    <div class="main-product">
+        <div class="main-product-link">
+            <ul class="main-product-link-ul">
+                <li style="font-weight: 600;">GT OMEGA RACING</li>
+                <li style="font-size: 14px;">Get <span style="text-decoration: underline;">5% off</span> by using the link below</li>
+                <li class="animate-grow">
+                    <a href="">GT OMEGA RACING WEBSITE</a>
+                </li>
+                <li class="animate-grow">
+                    <a href="">on Amazon(Global)</a>
+                </li>
+            </ul>
+        </div>
+        <div class="main-product-image">
+            <a href="" class="main-product-chair animate"></a>
+        </div>
+        <div class="main-product-desc">
+            <ul class="main-product-desc-ul">
+                <li style="font-weight: 600;font-size: 17px">ELEMENT SERIES</li>
+                <li style="font-size: 14px;text-align: center;">Minimalist branding
+                    Signature Reinforced PVC Leather with suede wings
+                    Super comfy pillow velour pillow set</li>
+                <li style="font-size: 15px;text-align: center;"> "Genuinely the best chair GT Omega have made" - Em</li>
+            </ul>
+        </div>
+    </div>
+    <div class="main-product">
+        <div class="main-product-link">
+            <ul class="main-product-link-ul">
+                <li style="font-weight: 600;">VIVIFY CABLES</li>
+                <li style="font-size: 14px;">Code <span style="text-decoration: underline;">"TechBlock10"</span> for 10% off</li>
+                <li class="animate-grow">
+                    <a href="">Vivify Cables Website</a>
+                </li>
+                <li class="animate-grow">
+                    <a href="">on Amazon(Global)</a>
+                </li>
+            </ul>
+        </div>
+        <div class="main-product-image">
+            <a href="" class="main-product-cable animate"></a>
+        </div>
+        <div class="main-product-desc">
+            <ul class="main-product-desc-ul">
+                <li style="font-weight: 600;font-size: 17px">ARQUUS W73o</li>
+                <li style="font-size: 14px;text-align: center;">4K Fiber Optics HDMI 2.0 Cable
+                    Supports bandwidths up to 18Gbps</li>
+                <li style="font-size: 15px;text-align: center;"> Sync with Razer Chroma
+                    It has RGB</li>
+            </ul>
+        </div>
+    </div>
+   <div class="normal-products">
+    <div class="norm">
+        <div class="norm-product-image">
+            <a href="" class="animate"><img src="{% static 'gamingsetup/gaming5.png' %}" style="width: 100%;,height: 100%;"></a>
+        </div>
+        <div class="norm-product-link">
+            <ul class="norm-product-link-ul">
+                <li style="font-weight: 600;">VIVIFY CABLES</li>
+                <li class="animate-grow">
+                    <a href="">Vivify Cables Website</a>
+                </li>
+                <li class="animate-grow">
+                    <a href="">on Amazon(Global)</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="norm">
+        <div class="norm-product-image">
+            <a href="" ><img src="{% static 'gamingsetup/gaming6.png' %}" style="width: 100%;,height: 100%;"></a>
+        </div>
+        <div class="norm-product-link">
+            <ul class="norm-product-link-ul">
+                <li style="font-weight: 600;">VIVIFY CABLES</li>
+                <li>
+                    <a href="">Vivify Cables Website</a>
+                </li>
+                <li>
+                    <a href="">on Amazon(Global)</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+   </div>
+   <div class="normal-products">
+    <div class="norm">
+        <div class="norm-product-image">
+            <a href="" ><img src="{% static 'gamingsetup/gaming7.png' %}" style="width: 100%;,height: 100%;"></a>
+        </div>
+        <div class="norm-product-link">
+            <ul class="norm-product-link-ul">
+                <li style="font-weight: 600;">VIVIFY CABLES</li>
+                <li>
+                    <a href="">Vivify Cables Website</a>
+                </li>
+                <li>
+                    <a href="">on Amazon(Global)</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="norm">
+        <div class="norm-product-image">
+            <a href="" ><img src="{% static 'gamingsetup/gaming8.png' %}" style="width: 100%;,height: 100%;"></a>
+        </div>
+        <div class="norm-product-link">
+            <ul class="norm-product-link-ul">
+                <li style="font-weight: 600;">VIVIFY CABLES</li>
+                <li>
+                    <a href="">Vivify Cables Website</a>
+                </li>
+                <li>
+                    <a href="">on Amazon(Global)</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+   </div>
+   <div class="normal-products">
+    <div class="norm">
+        <div class="norm-product-image">
+            <a href="" ><img src="{% static 'gamingsetup/gaming9.png' %}" style="width: 100%;,height: 100%;"></a>
+        </div>
+        <div class="norm-product-link"></div>
+    </div>
+    <div class="norm">
+        <div class="norm-product-image">
+            <a href="" ><img src="{% static 'gamingsetup/gaming10.png' %}" style="width: 100%;,height: 100%;"></a>
+        </div>
+        <div class="norm-product-link"></div>
+    </div>
+   </div>
+   <div class="normal-products">
+    <div class="norm">
+        <div class="norm-product-image">
+            <a href="" ><img src="{% static 'gamingsetup/gaming11.png' %}" style="width: 100%;,height: 100%;"></a>
+        </div>
+        <div class="norm-product-link"></div>
+    </div>
+    <div class="norm">
+        <div class="norm-product-image">
+            <a href="" ><img src="{% static 'gamingsetup/gaming12.png' %}" style="width: 100%;,height: 100%;"></a>
+        </div>
+        <div class="norm-product-link"></div>
+    </div>
+   </div>
+   <div class="normal-products">
+    <div class="norm">
+        <div class="norm-product-image">
+            <a href="" ><img src="{% static 'gamingsetup/gaming13.png' %}" style="width: 100%;,height: 100%;"></a>
+        </div>
+        <div class="norm-product-link"></div>
+    </div>
+    <div class="norm">
+        <div class="norm-product-image">
+            <a href="" ><img src="{% static 'gamingsetup/gaming14.png' %}" style="width: 100%;,height: 100%;"></a>
+        </div>
+        <div class="norm-product-link"></div>
+    </div>
+   </div>
+   <div class="normal-products">
+    <div class="norm">
+        <div class="norm-product-image">
+            <a href="" ><img src="{% static 'gamingsetup/gaming15.png' %}" style="width: 100%;,height: 100%;"></a>
+        </div>
+        <div class="norm-product-link"></div>
+    </div>
+    <div class="norm">
+        <div class="norm-product-image">
+            <a href="" ><img src="{% static 'gamingsetup/gaming16.png' %}" style="width: 100%;,height: 100%;"></a>
+        </div>
+        <div class="norm-product-link"></div>
+    </div>
+   </div>
+   <div class="normal-products">
+    <div class="norm">
+        <div class="norm-product-image">
+            <a href="" ><img src="{% static 'gamingsetup/gaming17.png' %}" style="width: 100%;,height: 100%;"></a>
+        </div>
+        <div class="norm-product-link"></div>
+    </div>
+    <div class="norm">
+        <div class="norm-product-image">
+            <a href="" ><img src="{% static 'gamingsetup/gaming18.png' %}" style="width: 100%;,height: 100%;"></a>
+        </div>
+        <div class="norm-product-link"></div>
+    </div>
+   </div>
+   <div class="normal-products">
+    <div class="norm">
+        <div class="norm-product-image">
+            <a href="" ><img src="{% static 'gamingsetup/gaming19.png' %}" style="width: 100%;,height: 100%;"></a>
+        </div>
+        <div class="norm-product-link"></div>
+    </div>
+    <div class="norm">
+        <div class="norm-product-image">
+            <a href="" ><img src="{% static 'gamingsetup/gaming20.png' %}" style="width: 100%;,height: 100%;"></a>
+        </div>
+        <div class="norm-product-link"></div>
+    </div>
+   </div>
+</div>
+
+{% endblock %}
+
+{% block afterbody %} 
+
+{% endblock %}

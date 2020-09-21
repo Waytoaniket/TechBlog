@@ -23,12 +23,12 @@
                     <div class="search-bar">
                         <input type="text" name="" class="search-txt" placeholder="Search..."/>
                         <a class="search-btn">
-                            <img src="{% static 'search.png' %} " style="width: 100%; transform:rotate(10deg)" />
+                            <img src="{% static 'home/search.png' %} " style="width: 100%; transform:rotate(10deg)" />
                         </a>
                     </div>
                 </li>
                 <li><a href="">
-                    <img id='cart-icon' src="{% static 'cart.jpg' %}" />
+                    <img id='cart-icon' src="{% static 'home/cart.jpg' %}" />
                     </a>
                 </li>
                 <li><a href="#" class="">Account</a></li>
@@ -36,15 +36,9 @@
             </ul>
           </div>
             <!-- menu -->
-            <div class="nav-bottom">
-            <ul>
-                <li><a href="/"  class="nav-active">HOME</a></li>
-                <li><a href="shop" class="">SHOP</a></li>
-                <li><a href="#" class="">GAMING SETUP</a></li>
-                <li><a href="video" class="">VIDEOS</a></li>
-                <li><a href="#" class="">CONTACT US</a></li>
-            </ul>
-          </div>
+
+          {% block nav-bottom %} {% endblock %}
+          
         </nav> 
         {% block body %} {% endblock %}
     </section>
@@ -64,10 +58,10 @@
           <li class="footer-heading font3 social-media" style="font-weight: 500; font-size: 23px;"> FOLLOW ME</li>
           <li>
             <ul class=" social-media">
-              <li><i class="fab fa-facebook-f" style="font-size:25px; color:grey;"></i></li>
-              <li><i class="fab fa-twitter" style="font-size:25px; color:grey;"></i></li>
-              <li><i class="fab fa-instagram" style="font-size:25px; color:grey;"></i></li>
-              <li><i class="fab fa-youtube" style="font-size:25px; color:grey;"></i></li>
+              <li><i class="fab fa-facebook-f"></i></li>
+              <li><i class="fab fa-twitter"></i></li>
+              <li><i class="fab fa-instagram"></i></li>
+              <li><i class="fab fa-youtube"></i></li>
             </ul>
           </li>
         </ul>
@@ -98,7 +92,7 @@
         </ul>
       </div>
     </div>
-<!-- ==================powered by========== -->
+<!-- ==================powered by=================== -->
 
     <div class="poweredby">
       <div class="poweredby-box">
@@ -122,5 +116,14 @@
 </body>
   
   {% block javascript %} {% endblock %}
+  <script>
+    function changeActive(obj){
+      let ele=document.getElementsByClassName("nav-bottom")
+      ele =ele[0].children[0].children
+      Array.from(ele).forEach(function(item){
+        item.classList.remove('nav-active')
+      });
+    }
+  </script>
     
 </html>

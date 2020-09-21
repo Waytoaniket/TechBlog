@@ -2,140 +2,150 @@
 {% load static %}
 {% block title %} VedantTechBlog {% endblock %}
 
+{% block nav-bottom %} 
+
+<div class="nav-bottom">
+  <ul>
+    <li class="animate-grow"><a href="/" onclick="changeActive()">HOME</a></li>
+    <li class="animate-grow nav-active" onclick="changeActive()"><a href="shop">SHOP</a></li>
+    <li class="animate-grow"><a href="gaming-setup" onclick="changeActive()">GAMING SETUP</a></li>
+    <li class="animate-grow"><a href="video" onclick="changeActive()">VIDEOS</a></li>
+    <li class="animate-grow"><a href="#" onclick="changeActive()">CONTACT US</a></li>
+  </ul>
+</div>
+
+{% endblock %}
+
 {% block body %} 
 
 <!-- -----------------slideshow------------------ -->
 <div class="slideshow-container">
 
     <div class="mySlides fade">
-      <img src="{% static 'shoppingSlide1.png' %}" style="width:100%; object-fit: cover; height: 600px;">
+      <img src="{% static 'shop/shoppingSlide1.png' %}" style="width:100%; object-fit: cover; height: 600px;">
     </div>
     
     <div class="mySlides fade">
-      <img src="{% static 'shoppingSlide2.png' %}" style="width:100%; object-fit: cover;  height: 600px;">
+      <img src="{% static 'shop/shoppingSlide2.png' %}" style="width:100%; object-fit: cover;  height: 600px;">
     </div>
     
-    <!-- <div class="mySlides fade">
-      <img src="{% static 'slide3.jpg' %}" style="width:100%;object-fit: cover;  height: 600px;">
-    </div> -->
     <div style="text-align:center;margin-top: -2%;">
       <span class="dot"></span> 
       <span class="dot"></span> 
-      <!-- <span class="dot"></span>  -->
     </div>
     
 </div>
   <!-- ------------------shopping------------------- -->
 <div class="shopping-box">
-  <div class="shopping-shop" style="width: 100%;">
+  <div class="shopping-shop animate-grow">
     GET 10% OFF WITH DISCOUNT CODE: RBG
   </div>
 </div>
 <div class="shopping-card-box">
-  <div class="shopping-card">
+  <div class="shopping-card animate">
     <ul>
-      <li><a href="#"><img src="{% static 'shirt1.png' %}" style="width:100%;height: 100%;"></a></li>
+      <li><a href="#"><img src="{% static 'shop/shirt1.png' %}" style="width:100%;height: 100%;"></a></li>
       <li>copy right</li>
         <li>$322</li>
     </ul>
   </div>
-  <div class="shopping-card">
+  <div class="shopping-card animate">
     <ul>
-      <li><a href="#"><img src="{% static 'shirt2.png' %}" style="width:100%;height: 100%;"></a></li>
+      <li><a href="#"><img src="{% static 'shop/shirt2.png' %}" style="width:100%;height: 100%;"></a></li>
       <li>copy right</li>
       <li>$542</li>
     </ul>
-  </div><div class="shopping-card">
+  </div><div class="shopping-card animate">
     <ul>
-      <li><a href="#"><img src="{% static 'shirt3.png' %}" style="width:100%;height: 100%;"></a></li>
+      <li><a href="#"><img src="{% static 'shop/shirt3.png' %}" style="width:100%;height: 100%;"></a></li>
       <li>copy right</li>
       <li>$112</li>
     </ul>
-  </div><div class="shopping-card">
+  </div><div class="shopping-card animate">
     <ul>
-      <li><a href="#"><img src="{% static 'shirt4.png' %}" style="width:100%;height: 100%;"></a></li>
+      <li><a href="#"><img src="{% static 'shop/shirt4.png' %}" style="width:100%;height: 100%;"></a></li>
       <li>copy right</li>
       <li>$201</li>
     </ul>
   </div>
 </div>
 <div class="shopping-card-box">
-    <div class="shopping-card">
+    <div class="shopping-card animate">
       <ul>
-          <li><a href="#"><img src="{% static 'shirt5.png' %}" style="width:100%;height: 100%;"></a></li>
+          <li><a href="#"><img src="{% static 'shop/shirt5.png' %}" style="width:100%;height: 100%;"></a></li>
           <li>copy right</li>
           <li>$322</li>
       </ul>
     </div>
-    <div class="shopping-card">
+    <div class="shopping-card animate">
       <ul>
-        <li><a href="#"><img src="{% static 'shirt6.png' %}" style="width:100%;height: 100%;"></a></li>
+        <li><a href="#"><img src="{% static 'shop/shirt6.png' %}" style="width:100%;height: 100%;"></a></li>
         <li>copy right</li>
         <li>$542</li>
       </ul>
-    </div><div class="shopping-card">
+    </div><div class="shopping-card animate">
       <ul>
-        <li><a href="#"><img src="{% static 'shirt7.png' %}" style="width:100%;height: 100%;"></a></li>
+        <li><a href="#"><img src="{% static 'shop/shirt7.png' %}" style="width:100%;height: 100%;"></a></li>
         <li>copy right</li>
         <li>$112</li>
       </ul>
-    </div><div class="shopping-card">
+    </div><div class="shopping-card animate">
       <ul>
-        <li><a href="#" style="display: flex; justify-content: center;"><img src="{% static 'shirt8.png' %}" style="width:60%;height: 100%;"></a></li>
+        <li><a href="#" style="display: flex; justify-content: center;"><img src="{% static 'shop/shirt8.png' %}" style="width:60%;height: 100%;"></a></li>
       <li>copy right</li>
         <li>$201</li>
       </ul>
     </div>
   </div><div class="shopping-card-box">
-    <div class="shopping-card">
+    <div class="shopping-card animate">
       <ul>
-        <li><a href="#" style="display: flex; justify-content: center;"><img src="{% static 'shirt9.png' %}" style="width:60%;height: 100%;"></a></li>
+        <li><a href="#" style="display: flex; justify-content: center;"><img src="{% static 'shop/shirt9.png' %}" style="width:60%;height: 100%;"></a></li>
         <li>copy right</li>
           <li>$322</li>
       </ul>
     </div>
-    <div class="shopping-card">
+    <div class="shopping-card animate">
       <ul>
-        <li><a href="#" style="display: flex; justify-content: center;"><img src="{% static 'shirt10.png' %}" style="width:60%;height: 100%;"></a></li>
+        <li><a href="#" style="display: flex; justify-content: center;"><img src="{% static 'shop/shirt10.png' %}" style="width:60%;height: 100%;"></a></li>
       <li>copy right</li>
         <li>$542</li>
       </ul>
-    </div><div class="shopping-card">
+    </div><div class="shopping-card animate">
       <ul>
-        <li><a href="#" style="display: flex; justify-content: center;"><img src="{% static 'shirt11.png' %}" style="width:60%;height: 100%;"></a></li>
+        <li><a href="#" style="display: flex; justify-content: center;"><img src="{% static 'shop/shirt11.png' %}" style="width:60%;height: 100%;"></a></li>
         <li>copy right</li>
         <li>$112</li>
       </ul>
-    </div><div class="shopping-card">
+    </div><div class="shopping-card animate">
       <ul>
-        <li><a href="#"><img src="{% static 'sticker.png' %}" style="width:100%;height: 100%;"></a></li>
+        <li><a href="#"><img src="{% static 'shop/sticker.png' %}" style="width:100%;height: 100%;"></a></li>
         <li>copy right</li>
         <li>$201</li>
       </ul>
     </div>
   </div><div class="shopping-card-box">
-    <div class="shopping-card">
+    <div class="shopping-card animate">
       <ul>
-          <li><a href="#"><img src="{% static 'sticker1.png' %}" style="width:100%;height: 100%;"></a></li>
+          <li><a href="#"><img src="{% static 'shop/sticker1.png' %}" style="width:100%;height: 100%;"></a></li>
           <li>copy right</li>
           <li>$322</li>
       </ul>
     </div>
-    <div class="shopping-card">
+    <div class="shopping-card animate">
       <ul>
-        <li><a href="#"><img src="{% static 'sticker2.png' %}" style="width:100%;height: 100%;"></a></li>
+        <li><a href="#"><img src="{% static 'shop/sticker2.png' %}" style="width:100%;height: 100%;"></a></li>
         <li>copy right</li>
         <li>$542</li>
       </ul>
-    </div><div class="shopping-card">
+    </div><div class="shopping-card animate">
       <ul>
-        <li><a href="#"><img src="{% static 'hat.png' %}" style="width:100%;height: 100%;"></a></li>
+        <li><a href="#"><img src="{% static 'shop/hat.png' %}" style="width:100%;height: 100%;"></a></li>
         <li>copy right</li>
         <li>$112</li>
       </ul>
-    </div><div class="shopping-card">
+    </div><div class="shopping-card animate">
       <ul>
-        <li><a href="#"><img src="{% static 'magicmug.png' %}" style="width:100%;height: 100%;"></a></li>
+        <li><a href="#"><img src="{% static 'shop/magicmug.png' %}" style="width:100%;height: 100%;"></a></li>
         <li>copy right</li>
         <li>$201</li>
       </ul>
@@ -146,27 +156,6 @@
 
 {% block afterbody %} 
 
-<!-- <div class="delivery-box">
-    <div class="delivery-inside-box">
-      <ul>
-        <li class="font4"> <i class='fa fa-truck' style='font-size:28px;  -webkit-transform: scaleX(-1);
-          transform: scaleX(-1);'></i> Fast Delivery</li>
-        <li class="font1" style="text-align: center; font-size: 14px; font-weight: bold;">to India,USA & UK</li>
-      </ul>
-    </div>
-    <div class="delivery-inside-box">
-      <ul>
-        <li class="font4"> <i class='fa fa-check' style='font-size:28px;'></i> Tracked Oders</li>
-        <li class="font1" style="text-align: center; font-size: 14px; font-weight: bold;">Easily keep track of your order</li>
-      </ul>
-    </div>
-    <div class="delivery-inside-box">
-      <ul>
-        <li class="font4"> <i class='fa fa-toggle-on' style='font-size:28px; '></i> Free Shipping</li>
-        <li class="font1" style="text-align: center; font-size: 14px; font-weight: bold;">Free worldwide shipping</li>
-      </ul>
-    </div>
-  </div> -->
 <div style="width: 100%;height: 70px;"></div>
 
 {% endblock %}

@@ -16,6 +16,7 @@ ul{
 
 a{
     text-decoration: none;
+    color: white;
 }
 .font1{
     font-family:Karla,sans-serif;
@@ -49,6 +50,15 @@ section{
     background-color: #1e232b;
     background-size: cover;
 }
+
+/* ------------------Animation---------------- */
+.animate-grow{
+    transition-duration: 0.5s;
+}
+.animate-grow:hover{
+    transform: scale(1.1);
+}
+
 /* navigation */
 nav{
     display: grid;
@@ -91,12 +101,10 @@ nav{
    } */
 
    .search-btn {
-    color: #e84118;
     float: right;
     width: 25px;
     height: 20px;
     border-radius: 50%;
-    background: #1d1d1e;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -145,9 +153,9 @@ nav{
     font-size: 1.2vw;
     font-weight: 700;
 }
-.nav-bottom .nav-active,.nav-bottom ul li a:hover{
+.nav-bottom .nav-active,.nav-bottom .nav-active a ,.nav-bottom ul li a:hover{
     color: #ffffff;
-    font-size: 1.24vw;
+    transform: scale(1.1);
     /* text-shadow: 0 1px 0 #d84f4f, 0 2px 0 #d54646, 0 3px 0 #ce3333, 0 4px 0 #b92e2e, 0 5px 0 #912525, 0 6px 0 #721e1e, 0px 6px 5px rgba(0,0,0,0.5); */
 }
 /* ----------------------------slideshow-------------------------- */
@@ -215,7 +223,9 @@ nav{
     height: 90%;
     display: inline-block;
     
+    
 }
+
 .jambo-text-btn{
     display: inline-grid;
     vertical-align: top;
@@ -232,6 +242,7 @@ nav{
     font-weight: 700;
 
 }
+
 .jambo-btn{
     width: 90%;
     background-color: #222222;
@@ -292,8 +303,8 @@ nav{
     align-items: center;
     font-family: 'Roboto', sans-serif;
     color: #ffffff;
-    font-size: 1.3vw;
-    font-weight: 550;
+    font-size: 1.2vw;
+    font-weight: 600;
 }
 /* ----------------------shopping section--------------- */
 .shopping-box{
@@ -304,6 +315,7 @@ nav{
     margin-block-start: 15px;
     margin-inline-start: 15px;
     margin-block-end: 15px;
+    justify-content: center;
 }
 .shopping-shop{
     width: 50%;
@@ -389,9 +401,7 @@ nav{
     height: auto;
     width: 100%;
 }
-.faq a{
-    margin-block-end: 6%;
- }
+
 .faq ul li{
     width: 100%;
     height: auto;
@@ -433,6 +443,7 @@ nav{
 }
 .faq-que:hover > #rotate {
     rotate: 90deg;
+    transform: rotate(90deg);
 }
 .faq-que:hover + .faq-ans {
     display: grid;   
@@ -488,7 +499,13 @@ nav{
     margin-inline-start: 2%;
     margin-inline-end: 2%;
 }
-
+.social-media li i{
+    font-size:25px;
+    color:grey;
+}
+.social-media li i:hover{
+   color: white;
+}
 .footer-search {
     width: 100%;
     position: relative;
@@ -573,7 +590,7 @@ nav{
 
 .video-card-box{
     width: 98%;
-    height: 315px;
+    height: 16.5vw;
     display: flex;
     margin-inline-start: 8px;
     margin-block-end: 15px;
@@ -592,7 +609,7 @@ nav{
 .video-card ul li{
     font-family: 'Roboto', sans-serif;
     color: #ffffff;
-    font-size: 18px;
+    font-size: 1.1vw;
     font-weight: 600;
     display: grid;
 }
@@ -601,9 +618,245 @@ nav{
     margin-top:3%;
     margin-bottom: 1%;
     width: 100%;
-    height: 82%; 
+    height: 84%; 
 }
 .video-card ul li:nth-child(2){
+    height: 16%;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ---------------------CSS FOR GAMING_SETUP --------------------- */
+
+.gaming-head-box{
+    width: 97%;
+    height: 5.12vw;
+    display: flex;
+    justify-content: space-between;
+    margin-block-start: 15px;
+    margin-inline-start: 15px;
+    margin-block-end: 15px;
+}
+.gaming-head{
+    width: 24%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(20, 20, 20);
+    font-size: 1.8vw;
+    font-weight: 900;
+}
+.gaming-head a{
+    color: white;
+}
+
+.gaming-disclosure{
+    margin-inline-start: 15px;
+    font-family: 'Roboto', sans-serif;
+    color: grey;
+    font-size: 17px;
+    font-weight: 600;
+}
+/* ---------------------------product------------------------ */
+
+.gaming-section{
+    width: 97%;
+    height: auto;
+    margin-block-start: 15px;
+    margin-inline-start: 15px;
+    margin-block-end: 15px;
+}
+
+.main-product{
+    width: 100%;
+    height: 20vw;
+    background-color: #393e46;
+    margin-top: 1%;
+    border-style: ridge;
+    display: flex;
+}
+
+.main-product-chair{
+    background-image: url("gamingsetup/gaming1.png");
+    background-position: 50% 50%;
+    background-size: contain;
+}
+
+.main-product-chair:hover {
+    background-image: url("gamingsetup/gaming2.png");
+}
+
+.main-product-cable{
+    background-image: url("gamingsetup/gaming3.png");
+    background-position: 50% 50%;
+    background-size: contain;
+    transition: color 0.1s ease-in,background-color 0.1s ease-in
+}
+
+.main-product-cable:hover {
+    background-image: url("gamingsetup/gaming4.png");
+}
+
+.main-product-link{
+    width: 37.5%;
+    height: 100%;
+}
+.main-product-link-ul{
+    display: grid;
+    width: 75%;
+    height: 100%;
+    float: right;
+    margin-inline-end: 5%;
+    justify-items: center;
+    align-content: center;
+    grid-auto-rows: 12% 14% 18% 18%;
+}
+
+.main-product-link-ul li:nth-child(1),.main-product-link-ul li:nth-child(2){
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
+.main-product-link-ul li:nth-child(3),.main-product-link-ul li:nth-child(4){
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    background-color: #53575a;
+    border-radius: 2%;
+    width: 100%;
+    height: 68%;
+    grid-auto-rows: 20%;
+    color: white;
+    align-items: center;
+    border-style: none;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.main-product-image{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-product-image a,.norm-product-image a{
+    text-decoration: none;
+    width: 95%;
+    height: 95%;
+    display: flex;
+}
+
+.animate:hover {
+    animation-name: pf-bob-float,pf-bob;
+    animation-duration: .3s,1.5s;
+    animation-delay: 0s,.3s;
+    animation-timing-function: ease-out,ease-in-out;
+    animation-iteration-count: 1,infinite;
+    animation-fill-mode: forwards;
+    animation-direction: normal,alternate;
+}
+@keyframes pf-bob-float {
+    100% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes pf-bob {
+    0% {
+        transform: translateY(-8px);
+    }
+    50% {
+        transform: translateY(-4px);
+    }
+    100% {
+        transform: translateY(-8px);
+    }
+}
+
+.main-product-desc{
+    width: 37.5%;
+    height: 100%;
+
+}
+.main-product-desc-ul{
+    font-family: 'Roboto', sans-serif;
+    display: grid;
+    width: 75%;
+    height: 100%;
+    float: left;
+    margin-inline-start: 5%;
+    justify-items: center;
+    align-content: center;
+    grid-auto-rows: 13% 25% 18%;
+    color: white;
+}
+
+.normal-products{
+    width: 100%;
+    height: 18vw;
+    margin-top: 1%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.norm{
+    width: 49.5%;
+    height: 100%;
+    background-color: #393e46;  
+    display: flex;
+}
+
+.norm-product-link{
+    width: 55%;
+    height: 100%;
+    display: flex;
     justify-content: center;
 }
 
+
+.norm-product-link-ul{
+    display: grid;
+    width: 75%;
+    height: 100%;
+    justify-items: center;
+    align-content: center;
+    grid-auto-rows: 20% 18% 18%;
+}
+
+.norm-product-link-ul li:nth-child(1){
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
+.norm-product-link-ul li:nth-child(2),.norm-product-link-ul li:nth-child(3){
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    background-color: #53575a;
+    border-radius: 2%;
+    width: 100%;
+    height: 68%;
+    grid-auto-rows: 20%;
+    color: white;
+    align-items: center;
+    border-style: none;
+    font-size: 11px;
+    font-weight: 600;
+}
+.norm-product-image{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.norm-image{
+    background-position: 50% 50%;
+    background-size: contain;
+}

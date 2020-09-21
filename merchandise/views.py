@@ -9,3 +9,6 @@ def shoppage(request):
 
 def videopage(request):
     return render(request,'videos.html')
+
+def gamingsetuppage(request):
+    return render(request,'gamingsetup.html')

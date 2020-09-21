@@ -2,21 +2,35 @@
 {% load static %}
 {% block title %} VedantTechBlog {% endblock %}
 
+{% block nav-bottom %}
+
+<div class="nav-bottom">
+  <ul>
+    <li class="animate-grow nav-active" ><a href="/" onclick="changeActive()" >HOME</a></li>
+    <li class="animate-grow"><a href="shop" onclick="changeActive()">SHOP</a></li>
+    <li class="animate-grow"><a href="gaming-setup" onclick="changeActive()">GAMING SETUP</a></li>
+    <li class="animate-grow"><a href="video" onclick="changeActive()">VIDEOS</a></li>
+    <li class="animate-grow"><a href="#" onclick="changeActive()">CONTACT US</a></li>
+  </ul>
+</div>
+
+{% endblock %}
+
 {% block body %} 
 
 <!-- -----------------slideshow------------------ -->
 <div class="slideshow-container">
 
     <div class="mySlides fade">
-      <img src="{% static 'slide1.jpg' %}" style="width:100%; object-fit: cover; height: 600px;">
+      <img src="{% static 'home/slide1.jpg' %}" style="width:100%; object-fit: cover; height: 600px;">
     </div>
     
     <div class="mySlides fade">
-      <img src="{% static 'slide2.jpg' %}" style="width:100%; object-fit: cover;  height: 600px;">
+      <img src="{% static 'home/slide2.jpg' %}" style="width:100%; object-fit: cover;  height: 600px;">
     </div>
     
     <div class="mySlides fade">
-      <img src="{% static 'slide3.jpg' %}" style="width:100%;object-fit: cover;  height: 600px;">
+      <img src="{% static 'home/slide3.jpg' %}" style="width:100%;object-fit: cover;  height: 600px;">
     </div>
     <div style="text-align:center;margin-top: -2%;">
       <span class="dot"></span> 
@@ -27,70 +41,70 @@
 </div>
     <!-- --------------Jambo card------------- -->
 <div class="jambo-box">
-    <div class="jambo-img">
-      <a href="#"><img src="{% static 'jambo1.jpg' %}" style="width:100%;height: 100%;"></a>
+    <div class="jambo-img animate-grow">
+      <a href="#"><img src="{% static 'home/jambo1.jpg' %}" style="width:100%;height: 100%;"></a>
     </div>
     <div class="jambo-text-btn">
         <ul>
-            <li><a href="#">GAMING SETUP</a></li>
-            <li><button class="jambo-btn">Visit Page</button></li>
+            <li><a href="#" class="animate-grow">GAMING SETUP</a></li>
+            <li><button class="jambo-btn animate-grow">Visit Page</button></li>
         </ul>
     </div>
 </div>
 <div class="jambo-box">
-  <div class="jambo-img">
-    <a href="#"><img src="{% static 'jambo2.jpg' %}" style="width:100%;height: 100%;"></a>
+  <div class="jambo-img animate-grow">
+    <a href="#"><img src="{% static 'home/jambo2.jpg' %}" style="width:100%;height: 100%;"></a>
   </div>
   <div class="jambo-text-btn">
       <ul>
-          <li><a href="#">PC BUILD</a></li>
-          <li><button class="jambo-btn">Visit Page</button></li>
+          <li><a href="#" class="animate-grow">PC BUILD</a></li>
+          <li><button class="jambo-btn animate-grow">Visit Page</button></li>
       </ul>
   </div>
 </div>
 <div class="jambo-box">
-    <div class="jambo-img">
-      <a href="#"><img src="{% static 'jambo3.jpg' %}" style="width:100%;height: 100%;"></a>
+    <div class="jambo-img animate-grow">
+      <a href="#"><img src="{% static 'home/jambo3.jpg' %}" style="width:100%;height: 100%;"></a>
     </div>
     <div class="jambo-text-btn">
         <ul>
-            <li><a href="#">RACING SIM</a></li>
-            <li><button class="jambo-btn">Visit Page</button></li>
+            <li><a href="#" class="animate-grow">RACING SIM</a></li>
+            <li><button class="jambo-btn animate-grow">Visit Page</button></li>
         </ul>
     </div>
 </div>
 <div class="jambo-box">
-  <div class="jambo-img">
-    <a href="#"><img src="{% static 'jambo4.jpg' %}" style="width:100%;height: 100%;"></a>
+  <div class="jambo-img animate-grow">
+    <a href="#"><img src="{% static 'home/jambo4.jpg' %}" style="width:100%;height: 100%;"></a>
   </div>
   <div class="jambo-text-btn">
       <ul>
-          <li><a href="#">ACCESSORIES</a></li>
-          <li><button class="jambo-btn">Visit Page</button></li>
+          <li><a href="#" class="animate-grow">ACCESSORIES</a></li>
+          <li><button class="jambo-btn animate-grow">Visit Page</button></li>
       </ul>
   </div>
 </div>
   <!-- --------------------Videos sections----------  -->
 <div class="video-sec">
-  <div class="video-heading">
-    <a href="">VIDEOS</a>
+  <div class="video-heading ">
+    <a href="" class="animate-grow">VIDEOS</a>
   </div>
   <div class="video-box">
-    <div class="video-img">
+    <div class="video-img animate">
       <ul>
-        <li><a href="#"><img src="{% static 'video5.jpg' %}" style="width:100%;height: 100%;"></a></li>
+        <li><a href="#"><img src="{% static 'video/video5.jpg' %}" style="width:100%;height: 100%;"></a></li>
         <li>FABULOUS EXPERIENCE AFTER NEW PC BUILD</li>
       </ul>
     </div>
-    <div class="video-img">
+    <div class="video-img animate">
       <ul>
-        <li><a href="#"><img src="{% static 'video7.jpg' %}" style="width:100%;height: 100%;"></a></li>
+        <li><a href="#"><img src="{% static 'video/video7.jpg' %}" style="width:100%;height: 100%;"></a></li>
         <li>AMAZING SPEAKER SENT BY LOGITECH</li>
       </ul>
     </div>
-    <div class="video-img">
+    <div class="video-img animate">
       <ul>
-        <li><a href="#"><img src="{% static 'video8.jpg' %}" style="width:100%;height: 100%;"></a></li>
+        <li><a href="#"><img src="{% static 'video/video8.jpg' %}" style="width:100%;height: 100%;"></a></li>
         <li>HANDY AND EASY TO PLAY WITH THIS JOYSTICK</li>
       </ul>
     </div>
@@ -98,36 +112,36 @@
 </div>
   <!-- ------------------shopping------------------- -->
 <div class="shopping-box">
-  <div class="shopping-shop">
+  <div class="shopping-shop animate-grow">
     SKRILL SHOP
   </div>
-  <div class="shopping-visit">
+  <div class="shopping-visit animate-grow">
       VISIT PAGE
   </div>
 </div>
 <div class="shopping-card-box">
-  <div class="shopping-card">
+  <div class="shopping-card animate">
     <ul>
-      <li><a href="#"><img src="{% static 'shirt1.png' %}" style="width:100%;height: 100%;"></a></li>
+      <li><a href="#"><img src="{% static 'shop/shirt1.png' %}" style="width:100%;height: 100%;"></a></li>
       <li>copy right</li>
       <li>$244</li>
     </ul>
   </div>
-  <div class="shopping-card">
+  <div class="shopping-card animate">
     <ul>
-      <li><a href="#"><img src="{% static 'shirt6.png' %}" style="width:100%;height: 100%;"></a></li>
+      <li><a href="#"><img src="{% static 'shop/shirt6.png' %}" style="width:100%;height: 100%;"></a></li>
       <li>copy right</li>
       <li>$542</li>
     </ul>
-  </div><div class="shopping-card">
+  </div><div class="shopping-card animate ">
     <ul>
-      <li><a href="#"><img src="{% static 'shirt3.png' %}" style="width:100%;height: 100%;"></a></li>
+      <li><a href="#"><img src="{% static 'shop/shirt3.png' %}" style="width:100%;height: 100%;"></a></li>
       <li>copy right</li>
       <li>$112</li>
     </ul>
-  </div><div class="shopping-card">
+  </div><div class="shopping-card animate">
     <ul>
-      <li><a href="#"><img src="{% static 'shirt4.png' %}" style="width:100%;height: 100%;"></a></li>
+      <li><a href="#"><img src="{% static 'shop/shirt4.png' %}" style="width:100%;height: 100%;"></a></li>
       <li>copy right</li>
       <li>$201</li>
     </ul>
@@ -136,11 +150,11 @@
   <!-- --------------------FAQ Section--------------------- -->
 <div class="faq-sec">
   <div class="shopping-logo">
-    <a href=""><img class="shopping-img" src="{% static 'ShoppingLogo.jpg' %}" ></a>
+    <a href=""><img class="shopping-img animate" src="{% static 'home/ShoppingLogo.jpg' %}" ></a>
   </div>
   <div class="faq">
     <ul>
-      <li class="faq-head"><a href="" class="font3">FAQ</a></li>
+      <li class="faq-head"><a href="" class="font3 animate-grow">FAQ</a></li>
       <li>
         <div class="faq-que">
           <span>When will i ge my order?</span>
