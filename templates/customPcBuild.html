@@ -1,0 +1,70 @@
+{% extends 'basic.html' %}
+{% load static %}
+{% block title %} VedantTechBlog {% endblock %}
+
+{% block nav-bottom %} 
+
+<div class="nav-bottom">
+    <ul>
+      <li class="animate-grow"><a href="/"  onclick="changeActive()">HOME</a></li>
+      <li class="animate-grow"><a href="shop" onclick="changeActive()">SHOP</a></li>
+      <li class="animate-grow nav-active"><a href="gaming-setup" onclick="changeActive()">GAMING SETUP</a></li>
+      <li class="animate-grow"><a href="video" onclick="changeActive()">VIDEOS</a></li>
+      <li class="animate-grow"><a href="#" onclick="changeActive()">CONTACT US</a></li>
+    </ul>
+  </div>
+
+{% endblock %}
+
+
+{% block body %} 
+
+<div class="gaming-head-box">
+    <div class="gaming-head animate-grow">
+        <a href="gaming-setup">GAMING SETUP</a>
+    </div> 
+    <div class="gaming-head animate-grow">
+        <a href="custom-pc-build">CUSTOM PC BUILD</a>
+       
+    </div>
+    <div class="gaming-head animate-grow">
+        <a href="racing-simulator">RACING SIMULATOR</a>
+    </div> 
+    <div class="gaming-head animate-grow">
+        <a href="accessories">ACCESSORIES</a>
+    </div>
+</div>
+<div class="gaming-disclosure">
+    FTC DISCLOSURE: We may earn a commission when you use one of our coupons/links to make a purchase.  
+</div>
+<div class="gaming-section">
+   <div class="normal-products">
+        {% for gprod,prod in Gprods %}
+            <div class="norm">
+                <div class="norm-product-image">
+                    <a class="animate"><img src="/media/{{gprod.gprod_img}}" style="width: 100%;,height: 100%;"></a>
+                </div>
+                <div class="norm-product-link">
+                    <ul class="norm-product-link-ul">
+                        <li style="font-weight: 600;">{{gprod.gprod_name}}{{forloop.counter}}</li>
+                        {% for i in prod %}
+                        <li class="animate-grow">
+                            <a href="{{i.link}}">{{i.store}}</a>
+                        </li>
+                        {% endfor %}
+                        
+                    </ul>
+                </div>
+            </div>
+    {% if forloop.counter|divisibleby:2 and not forloop.last %}
+    </div>
+    <div class="normal-products">
+    {% endif %}
+        {% endfor %}
+    </div>
+
+{% endblock %}
+
+{% block afterbody %} 
+
+{% endblock %}

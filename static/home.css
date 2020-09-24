@@ -247,7 +247,10 @@ nav{
     width: 90%;
     background-color: #222222;
     color: white;
-    border: none;
+    border-color: white;
+    border-style: solid;
+    border-width: 1.1px;
+    border-radius: 4px;
     padding: 2%;
     margin-top: 7%;
     margin-left: 5%;
@@ -303,7 +306,7 @@ nav{
     align-items: center;
     font-family: 'Roboto', sans-serif;
     color: #ffffff;
-    font-size: 1.2vw;
+    font-size: 1vw;
     font-weight: 600;
 }
 /* ----------------------shopping section--------------- */
@@ -318,7 +321,7 @@ nav{
     justify-content: center;
 }
 .shopping-shop{
-    width: 50%;
+    width: 48%;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -361,7 +364,7 @@ nav{
 .shopping-card ul li{
     font-family: 'Roboto', sans-serif;
     color: #ffffff;
-    font-size: 18px;
+    font-size: 1.3vw;
     display: grid;
     font-weight: 600;
 }
@@ -679,24 +682,24 @@ nav{
 }
 
 .main-product-chair{
-    background-image: url("gamingsetup/gaming1.png");
+    background-image: url("/media/gamingsetup/gaming1.png");
     background-position: 50% 50%;
     background-size: contain;
 }
 
 .main-product-chair:hover {
-    background-image: url("gamingsetup/gaming2.png");
+    background-image: url("/media/gamingsetup/gaming2.png");
 }
 
 .main-product-cable{
-    background-image: url("gamingsetup/gaming3.png");
+    background-image: url("/media/gamingsetup/gaming3.png");
     background-position: 50% 50%;
     background-size: contain;
     transition: color 0.1s ease-in,background-color 0.1s ease-in
 }
 
 .main-product-cable:hover {
-    background-image: url("gamingsetup/gaming4.png");
+    background-image: url("/media/gamingsetup/gaming4.png");
 }
 
 .main-product-link{
@@ -722,18 +725,23 @@ nav{
 }
 .main-product-link-ul li:nth-child(3),.main-product-link-ul li:nth-child(4){
     font-family: 'Roboto', sans-serif;
-    display: flex;
-    justify-content: center;
     background-color: #53575a;
     border-radius: 2%;
     width: 100%;
     height: 68%;
     grid-auto-rows: 20%;
     color: white;
-    align-items: center;
     border-style: none;
     font-size: 11px;
     font-weight: 600;
+}
+
+.main-product-link-ul li a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .main-product-image{
@@ -825,29 +833,33 @@ nav{
     height: 100%;
     justify-items: center;
     align-content: center;
-    grid-auto-rows: 20% 18% 18%;
+    grid-auto-rows: 16% 18% 18%;
 }
 
 .norm-product-link-ul li:nth-child(1){
     font-family: 'Roboto', sans-serif;
     color: white;
-    font-size: 20px;
+    font-size: 1.1vw;
     font-weight: 500;
 }
 .norm-product-link-ul li:nth-child(2),.norm-product-link-ul li:nth-child(3){
     font-family: 'Roboto', sans-serif;
-    display: flex;
-    justify-content: center;
     background-color: #53575a;
     border-radius: 2%;
     width: 100%;
     height: 68%;
     grid-auto-rows: 20%;
     color: white;
-    align-items: center;
     border-style: none;
     font-size: 11px;
     font-weight: 600;
+}
+.norm-product-link-ul li a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .norm-product-image{
     width: 45%;

@@ -23,98 +23,18 @@
 </div>
   <!-- --------------------Videos sections----------  -->
   <div class="video-card-box">
+    {% for video in Vids %}
     <div class="video-card animate">
       <ul>
-        <li><a href="#"><img src="{% static 'video/video8.jpg' %}" style="width:100%;height: 100%;"></a></li>
-        <li>AMAZING SPEAKER SENT BY LOGITECH</li>
+        <li><a href="#"><img src="/media/{{video.vid_img}}" style="width:100%;height: 100%;"></a></li>
+        <li>{{video.Vid_title}}</li>
       </ul>
     </div>
-    <div class="video-card animate">
-      <ul>
-        <li><a href="#"><img src="{% static 'video/video9.jpg' %}" style="width:100%;height: 100%;"></a></li>
-        <li>AMAZING SPEAKER SENT BY LOGITECH</li>
-      </ul>
-    </div><div class="video-card animate">
-      <ul>
-        <li><a href="#"><img src="{% static 'video/video10.jpg' %}" style="width:100%;height: 100%;"></a></li>
-        <li>AMAZING SPEAKER SENT BY LOGITECH</li>
-      </ul>
-    </div><div class="video-card animate">
-      <ul>
-        <li><a href="#"><img src="{% static 'video/video4.jpg' %}" style="width:100%;height: 100%;"></a></li>
-        <li>AMAZING SPEAKER SENT BY LOGITECH</li>
-      </ul>
+    {% if forloop.counter|divisibleby:4 and not forloop.last %}
     </div>
+    <div class="video-card-box">
+    {% endif %}
+    {% endfor %}
   </div>
-  <div class="video-card-box">
-      <div class="video-card animate">
-        <ul>
-            <li><a href="#"><img src="{% static 'video/video5.jpg' %}" style="width:100%;height: 100%;"></a></li>
-            <li>AMAZING SPEAKER SENT BY LOGITECH</li>
-        </ul>
-      </div>
-      <div class="video-card animate">
-        <ul>
-          <li><a href="#"><img src="{% static 'video/video6.jpg' %}" style="width:100%;height: 100%;"></a></li>
-          <li>AMAZING SPEAKER SENT BY LOGITECH</li>
-        </ul>
-      </div><div class="video-card animate">
-        <ul>
-          <li><a href="#"><img src="{% static 'video/video7.jpg' %}" style="width:100%;height: 100%;"></a></li>
-          <li>AMAZING SPEAKER SENT BY LOGITECH</li>
-        </ul>
-      </div><div class="video-card animate">
-        <ul>
-          <li><a href="#"><img src="{% static 'video/video8.jpg' %}" style="width:100%;height: 100%;"></a></li>
-          <li>AMAZING SPEAKER SENT BY LOGITECH</li>
-        </ul>
-      </div>
-    </div><div class="video-card-box">
-      <div class="video-card animate">
-        <ul>
-          <li><a href="#"><img src="{% static 'video/video9.jpg' %}" style="width:100%;height: 100%;"></a></li>
-          <li>AMAZING SPEAKER SENT BY LOGITECH</li>
-        </ul>
-      </div>
-      <div class="video-card animate">
-        <ul>
-          <li><a href="#"><img src="{% static 'video/video10.jpg' %}" style="width:100%;height: 100%;"></a></li>
-          <li>AMAZING SPEAKER SENT BY LOGITECH</li>
-        </ul>
-      </div><div class="video-card animate">
-        <ul>
-          <li><a href="#"><img src="{% static 'video/video11.jpg' %}" style="width:100%;height: 100%;"></a></li>
-          <li>AMAZING SPEAKER SENT BY LOGITECH</li>
-        </ul>
-      </div><div class="video-card animate">
-        <ul>
-          <li><a href="#"><img src="{% static 'video/video12.jpg' %}" style="width:100%;height: 100%;"></a></li>
-          <li>AMAZING SPEAKER SENT BY LOGITECH</li>
-        </ul>
-      </div>
-    </div><div class="video-card-box">
-      <div class="video-card animate">
-        <ul>
-          <li><a href="#"><img src="{% static 'video/video13.jpg' %}" style="width:100%;height: 100%;"></a></li>
-          <li>AMAZING SPEAKER SENT BY LOGITECH</li>
-        </ul>
-      </div>
-      <div class="video-card animate">
-        <ul>
-          <li><a href="#"><img src="{% static 'video/video14.jpg' %}" style="width:100%;height: 100%;"></a></li>
-          <li>AMAZING SPEAKER SENT BY LOGITECH</li>
-        </ul>
-      </div><div class="video-card animate">
-        <ul>
-          <li><a href="#"><img src="{% static 'video/video15.jpg' %}" style="width:100%;height: 100%;"></a></li>
-          <li>AMAZING SPEAKER SENT BY LOGITECH</li>
-        </ul>
-      </div><div class="video-card animate">
-        <ul>
-          <li><a href="#"><img src="{% static 'video/video16.jpg' %}" style="width:100%;height: 100%;"></a></li>
-          <li>AMAZING SPEAKER SENT BY LOGITECH</li>
-        </ul>
-      </div>
-    </div>
   
 {% endblock %}

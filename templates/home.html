@@ -22,15 +22,15 @@
 <div class="slideshow-container">
 
     <div class="mySlides fade">
-      <img src="{% static 'home/slide1.jpg' %}" style="width:100%; object-fit: cover; height: 600px;">
+      <img src="/media/home/slide1.jpg" style="width:100%; object-fit: cover; height: 600px;">
     </div>
     
     <div class="mySlides fade">
-      <img src="{% static 'home/slide2.jpg' %}" style="width:100%; object-fit: cover;  height: 600px;">
+      <img src="/media/home/slide2.jpg" style="width:100%; object-fit: cover;  height: 600px;">
     </div>
     
     <div class="mySlides fade">
-      <img src="{% static 'home/slide3.jpg' %}" style="width:100%;object-fit: cover;  height: 600px;">
+      <img src="/media/home/slide3.jpg" style="width:100%;object-fit: cover;  height: 600px;">
     </div>
     <div style="text-align:center;margin-top: -2%;">
       <span class="dot"></span> 
@@ -42,115 +42,89 @@
     <!-- --------------Jambo card------------- -->
 <div class="jambo-box">
     <div class="jambo-img animate-grow">
-      <a href="#"><img src="{% static 'home/jambo1.jpg' %}" style="width:100%;height: 100%;"></a>
+      <a href="gaming-setup"><img src="/media/home/jambo1.jpg" style="width:100%;height: 100%;"></a>
     </div>
     <div class="jambo-text-btn">
         <ul>
-            <li><a href="#" class="animate-grow">GAMING SETUP</a></li>
-            <li><button class="jambo-btn animate-grow">Visit Page</button></li>
+            <li><a href="gaming-setup" class="animate-grow">GAMING SETUP</a></li>
+            <li><button class="jambo-btn animate-grow" onclick="location.href='gaming-setup'" >Visit Page</button></li>
         </ul>
     </div>
 </div>
 <div class="jambo-box">
   <div class="jambo-img animate-grow">
-    <a href="#"><img src="{% static 'home/jambo2.jpg' %}" style="width:100%;height: 100%;"></a>
+    <a href="custom-pc-build"><img src="/media/home/jambo2.jpg" style="width:100%;height: 100%;"></a>
   </div>
   <div class="jambo-text-btn">
       <ul>
-          <li><a href="#" class="animate-grow">PC BUILD</a></li>
-          <li><button class="jambo-btn animate-grow">Visit Page</button></li>
+          <li><a href="custom-pc-build" class="animate-grow">PC BUILD</a></li>
+          <li><button class="jambo-btn animate-grow" onclick="location.href='custom-pc-build'">Visit Page</button></li>
       </ul>
   </div>
 </div>
 <div class="jambo-box">
     <div class="jambo-img animate-grow">
-      <a href="#"><img src="{% static 'home/jambo3.jpg' %}" style="width:100%;height: 100%;"></a>
+      <a href="racing-simulator"><img src="/media/home/jambo3.jpg" style="width:100%;height: 100%;"></a>
     </div>
     <div class="jambo-text-btn">
         <ul>
-            <li><a href="#" class="animate-grow">RACING SIM</a></li>
-            <li><button class="jambo-btn animate-grow">Visit Page</button></li>
+            <li><a href="racing-simulator" class="animate-grow">RACING SIM</a></li>
+            <li><button class="jambo-btn animate-grow" onclick="location.href='racing-simulator'">Visit Page</button></li>
         </ul>
     </div>
 </div>
 <div class="jambo-box">
   <div class="jambo-img animate-grow">
-    <a href="#"><img src="{% static 'home/jambo4.jpg' %}" style="width:100%;height: 100%;"></a>
+    <a href="accessories"><img src="/media/home/jambo4.jpg" style="width:100%;height: 100%;"></a>
   </div>
   <div class="jambo-text-btn">
       <ul>
-          <li><a href="#" class="animate-grow">ACCESSORIES</a></li>
-          <li><button class="jambo-btn animate-grow">Visit Page</button></li>
+          <li><a href="accessories" class="animate-grow">ACCESSORIES</a></li>
+          <li><button class="jambo-btn animate-grow" onclick="location.href='accessories'">Visit Page</button></li>
       </ul>
   </div>
 </div>
   <!-- --------------------Videos sections----------  -->
 <div class="video-sec">
   <div class="video-heading ">
-    <a href="" class="animate-grow">VIDEOS</a>
+    <a href="video" class="animate-grow">VIDEOS</a>
   </div>
   <div class="video-box">
+    {% for vids in vid %}
     <div class="video-img animate">
       <ul>
-        <li><a href="#"><img src="{% static 'video/video5.jpg' %}" style="width:100%;height: 100%;"></a></li>
-        <li>FABULOUS EXPERIENCE AFTER NEW PC BUILD</li>
+        <li><a href="#"><img src="/media/{{vids.vid_img}}" style="width:100%;height: 100%;"></a></li>
+        <li>{{vids.Vid_title}}</li>
       </ul>
     </div>
-    <div class="video-img animate">
-      <ul>
-        <li><a href="#"><img src="{% static 'video/video7.jpg' %}" style="width:100%;height: 100%;"></a></li>
-        <li>AMAZING SPEAKER SENT BY LOGITECH</li>
-      </ul>
-    </div>
-    <div class="video-img animate">
-      <ul>
-        <li><a href="#"><img src="{% static 'video/video8.jpg' %}" style="width:100%;height: 100%;"></a></li>
-        <li>HANDY AND EASY TO PLAY WITH THIS JOYSTICK</li>
-      </ul>
-    </div>
+    {% endfor %}
   </div>
 </div>
   <!-- ------------------shopping------------------- -->
 <div class="shopping-box">
-  <div class="shopping-shop animate-grow">
-    SKRILL SHOP
+  <div  class="shopping-shop animate-grow">
+    <a href="shop">SKRILL SHOP</a>
   </div>
   <div class="shopping-visit animate-grow">
-      VISIT PAGE
+    <a href="shop"> VISIT PAGE</a>
   </div>
 </div>
 <div class="shopping-card-box">
+  {% for shop in shop_prod %}
   <div class="shopping-card animate">
     <ul>
-      <li><a href="#"><img src="{% static 'shop/shirt1.png' %}" style="width:100%;height: 100%;"></a></li>
-      <li>copy right</li>
-      <li>$244</li>
+      <li><a href="#"><img src="/media/{{shop.prod_img}}" style="width:100%;height: 100%;"></a></li>
+      <li style="text-overflow: ellipsis; overflow: hidden; height: 6.5%;">{{shop.prod_name}}</li>
+      <li style="font-size: 1.1vw; font-weight: 100; color: grey;">{{shop.prod_color}}</li>
+      <li style="font-size: 1.3vw; font-weight: 100;">₹{{shop.prod_cost}}</li>
     </ul>
   </div>
-  <div class="shopping-card animate">
-    <ul>
-      <li><a href="#"><img src="{% static 'shop/shirt6.png' %}" style="width:100%;height: 100%;"></a></li>
-      <li>copy right</li>
-      <li>$542</li>
-    </ul>
-  </div><div class="shopping-card animate ">
-    <ul>
-      <li><a href="#"><img src="{% static 'shop/shirt3.png' %}" style="width:100%;height: 100%;"></a></li>
-      <li>copy right</li>
-      <li>$112</li>
-    </ul>
-  </div><div class="shopping-card animate">
-    <ul>
-      <li><a href="#"><img src="{% static 'shop/shirt4.png' %}" style="width:100%;height: 100%;"></a></li>
-      <li>copy right</li>
-      <li>$201</li>
-    </ul>
-  </div>
+  {% endfor %}
 </div>
   <!-- --------------------FAQ Section--------------------- -->
 <div class="faq-sec">
   <div class="shopping-logo">
-    <a href=""><img class="shopping-img animate" src="{% static 'home/ShoppingLogo.jpg' %}" ></a>
+    <a href="shop"><img class="shopping-img animate" src="/media/home/ShoppingLogo.jpg" ></a>
   </div>
   <div class="faq">
     <ul>
