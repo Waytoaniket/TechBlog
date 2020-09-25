@@ -47,10 +47,10 @@
       <div class="shopping-card animate">
         <ul>
             {% if forloop.counter == 7 or forloop.counter == 8 or forloop.counter == 9 or forloop.counter == 11 %}
-            <li><a href="/shop/{{prod.prod_name}}" style="display:flex; justify-content:center"><img src='/media/{{prod.prod_img}}' style="width:70%;height: 100%;"></a></li>
+            <li><a href="#" style="display:flex; justify-content:center"><img src='/media/{{prod.prod_img}}' style="width:70%;height: 100%;"></a></li>
             
             {% else %}
-            <li><a href="/shop/{{prod.prod_name}}"><img src='/media/{{prod.prod_img}}' style="width:100%;height: 100%;"></a></li>
+            <li><a href="#"><img src='/media/{{prod.prod_img}}' style="width:100%;height: 100%;"></a></li>
             {% endif %}
             <li style="text-overflow: ellipsis; overflow: hidden; height: 6.5%;">{{prod.prod_name}}</li>
             <li style="font-size: 1.1vw; font-weight: 100; color: grey;">{{prod.prod_color}}</li>

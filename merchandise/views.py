@@ -15,11 +15,24 @@ def shoppage(request):
     products={'shop_prod':shop_prod}
     return render(request,'shop.html',products)
 
+def productdetails(request,product_name):
+    shop_prod = Product.objects.all()[:4]
+    prod = Product.objects.get(prod_name=product_name)
+    # print(shop_prod[0].prod_cost,"        hello")
+    products={'shop_prod':shop_prod,'product':prod}
+    return render(request,'productdetails.html',products)
+
 def videopage(request):
     vid = Video.objects.all()
     # print(vid[0].Vid_title)
     vids={'Vids':vid,'containers':range(0,math.ceil(len(vid)/4))}
     return render(request,'videos.html',vids)
+
+def videoplay(request):
+    vid = Video.objects.all()
+    # print(vid[0].Vid_title)
+    vids={'Vids':vid,'containers':range(0,math.ceil(len(vid)/4))}
+    return render(request,'videoplay.html',vids)
 
 
 def gamingsetuppage(request):
@@ -93,6 +106,7 @@ def accessories(request):
         allprod.append([gprod,prod])
     gproduct={'Gprods':allprod}
     return render(request,'accessories.html',gproduct)
+
 
 
 

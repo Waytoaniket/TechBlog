@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <title>{% block title %} {% endblock %}</title>
+    <link rel="shortcut icon" href="#">
     <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap" rel="stylesheet">
@@ -22,12 +23,12 @@
                     <div class="search-bar">
                         <input type="text" name="" class="search-txt" placeholder="Search..."/>
                         <a class="search-btn">
-                            <img src="{% static 'home/search.png' %} " style="width: 100%; transform:rotate(10deg)" />
+                            <img src="/media/home/search.png " style="width: 100%; transform:rotate(10deg)" />
                         </a>
                     </div>
                 </li>
                 <li><a href="">
-                    <img id='cart-icon' src="{% static 'home/cart.jpg' %}" />
+                    <img id='cart-icon' src="/media/home/cart.jpg" />
                     </a>
                 </li>
                 <li><a href="#" class="">Account</a></li>

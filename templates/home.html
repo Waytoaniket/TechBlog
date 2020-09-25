@@ -113,7 +113,7 @@
   {% for shop in shop_prod %}
   <div class="shopping-card animate">
     <ul>
-      <li><a href="#"><img src="/media/{{shop.prod_img}}" style="width:100%;height: 100%;"></a></li>
+      <li><a href="/shop/{{shop.prod_name}}"><img src="/media/{{shop.prod_img}}" style="width:100%;height: 100%;"></a></li>
       <li style="text-overflow: ellipsis; overflow: hidden; height: 6.5%;">{{shop.prod_name}}</li>
       <li style="font-size: 1.1vw; font-weight: 100; color: grey;">{{shop.prod_color}}</li>
       <li style="font-size: 1.3vw; font-weight: 100;">₹{{shop.prod_cost}}</li>
@@ -130,9 +130,9 @@
     <ul>
       <li class="faq-head"><a href="" class="font3 animate-grow">FAQ</a></li>
       <li>
-        <div class="faq-que">
-          <span>When will i ge my order?</span>
-          <i class='fas fa-angle-right' id="rotate" style='font-size:24px'></i>
+        <div class="faq-que" onclick="showAns(this)">
+          <span >When will i ge my order?</span>
+          <i class='fas fa-angle-right' style='font-size:24px'></i>
         </div>
         <div class="faq-ans">
           <div class="font1">It usually takes 3-7 days to fulfil an order, after it's shipped out. The shipping time depends on your location, but can be estimated as follows:</div>
@@ -144,26 +144,26 @@
           </ul>
         </div>
         
-        <div class="faq-que">
+        <div class="faq-que" onclick="showAns(this)">
           <span>How can i track my package?</span>
-          <i class='fas fa-angle-right' id="rotate" style='font-size:24px'></i>
+          <i class='fas fa-angle-right' style='font-size:24px'></i>
         </div>
         <div class="faq-ans">
           <div class="font1">Every order placed on our store is trackable! When your order ships out, you'll receive an email with an order tracking link. We even offer order tracking via Facebook Messenger! </div>
         </div>
         
-        <div class="faq-que">
+        <div class="faq-que" onclick="showAns(this)">
           <span>How are your product made?</span>
-          <i class='fas fa-angle-right' id="rotate" style='font-size:24px'></i>
+          <i class='fas fa-angle-right' style='font-size:24px'></i>
         </div>
         <div class="faq-ans">
           <div class="font1">We work with a high-quality print-on-demand order fulfilment company that has locations worldwide. All of our T-Shirts (excluding oversized tees) are made in the USA.
           </div>
         </div>
         
-        <div class="faq-que">
+        <div class="faq-que" onclick="showAns(this)">
           <span>Do you offer refunds,returns or exchange?</span>
-          <i class='fas fa-angle-right' id="rotate" style='font-size:24px'></i>
+          <i class='fas fa-angle-right' style='font-size:24px'></i>
         </div>
         <div class="faq-ans">
           <div class="font1">
@@ -174,9 +174,9 @@
           </ul>
         </div>
 
-        <div class="faq-que">
+        <div class="faq-que" onclick="showAns(this)">
           <span>Wher can i find product sizing information?</span>
-          <i class='fas fa-angle-right' id="rotate" style='font-size:24px'></i>
+          <i class='fas fa-angle-right' style='font-size:24px'></i>
         </div>
         <div class="faq-ans">
           <div class="font1">
@@ -238,6 +238,12 @@
       slides[slideIndex-1].style.display = "block";  
       dots[slideIndex-1].className += " active";
       setTimeout(showSlides, 3000); // Change image every 3 seconds
+    }
+
+    function showAns(x){
+      x.children[1].classList.toggle("rotate")
+      y=x.nextElementSibling
+      y.classList.toggle("display")
     }
 
    

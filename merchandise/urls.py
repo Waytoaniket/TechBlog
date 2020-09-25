@@ -10,7 +10,7 @@ urlpatterns = [
     path('custom-pc-build', views.customPcBuild, name='custom-pc-build'),
     path('racing-simulator', views.racingSimulator, name='racing-simulator'),
     path('accessories', views.accessories, name='accessories'),
-
-
+    path('shop/<str:product_name>', views.productdetails, name='productdetails'),
+    path('vedio/vedio-name', views.videoplay, name='videoplay'),
 
 ]

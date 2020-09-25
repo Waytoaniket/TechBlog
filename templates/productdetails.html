@@ -1,0 +1,211 @@
+{% extends 'basic.html' %}
+{% load static %}
+{% block title %} VedantTechBlog {% endblock %}
+
+{% block nav-bottom %} 
+
+<div class="nav-bottom">
+  <ul>
+    <li class="animate-grow"><a href="/" onclick="changeActive()">HOME</a></li>
+    <li class="animate-grow" onclick="changeActive()"><a href="/shop">SHOP</a></li>
+    <li class="animate-grow"><a href="/gaming-setup" onclick="changeActive()">GAMING SETUP</a></li>
+    <li class="animate-grow"><a href="/video" onclick="changeActive()">VIDEOS</a></li>
+    <li class="animate-grow"><a href="#" onclick="changeActive()">CONTACT US</a></li>
+  </ul>
+</div>
+
+{% endblock %}
+
+{% block body %} 
+
+<div class="product-detail-box">
+    <div class="product-detail-img-box">
+        <div class="product-detail-img">
+            <img src='/media/{{product.prod_img}}' style="width:100%;height: 100%;">
+        </div>
+        <div class="product-img-option">
+            <ul class="product-img-option-ul">
+                <li class="product-img-option-ul-li box-shadow" >
+                    <img src='/media/{{product.prod_img}}' style="width:100%;height: 100%;" onmouseover="addShadow(this)">
+                </li>
+                <li class="product-img-option-ul-li">
+                    <img src='/media/{{product.prod_img}}' style="width:100%;height: 100%;" onmouseover="addShadow(this)">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="product-info">
+        <div class="product-name-sec">
+            <div class="product-review">
+                Best Seller
+            </div>
+            <div class="product-name">
+                {{product.prod_name}}
+            </div>
+            <div class="product-cost">
+                ₹ {{product.prod_cost}}
+            </div>
+            <div class="product-buttons">
+                <input type="number" id=number-of-product value="1" min="1" max="10">
+                <select id="product-size" name="produts">
+                    <option value="Black/XS">Black/XS</option>
+                    <option value="Black/S">Black/S</option>
+                    <option value="Black/M">Black/M</option>
+                    <option value="Black/L">Black/L</option>
+                    <option value="Black/XL">Black/XL</option>
+                    <option value="Black/2XL">Black/2XL</option>
+                    <option value="Black/3XL">Black/3XL</option>
+                  </select>
+                <button class="add-to-cart animate-grow">ADD TO CART</button>
+            </div>
+        </div>
+        <div class="product-desc-sec">
+            <ul class="main-desc">
+                <li class="main-desc-li"><span class="fa fa-check-circle" style="color: dodgerblue; margin-inline-end: 1%;"></span>"TB" DRIP LOGO</li>
+                <li class="main-desc-li"><span class="fa fa-check-circle" style="color: dodgerblue; margin-inline-end: 1%;"></span>"TB" DRIP LOGO</li>
+                <li class="main-desc-li"><span class="fa fa-check-circle" style="color: dodgerblue; margin-inline-end: 1%;"></span>100% FINE JERSEY COTTON</li>
+                <li style="font-size: 14px; color: #bbb;">Fitted, comfortable, and soft—this t-shirt was made just for you. And it can withstand several washings while maintaining its shape, so it's great for everyday wear!</li>
+            </ul>
+            <ul class="desc-list">
+                <li>TB Drip Logo</li>
+                <li>100% fine jersey cotton</li>
+                <li>Heather grey is 90% cotton, 10% polyester</li>
+                <li>Fabric weight: 4.3 oz/y² (146 g/m²)</li>
+                <li>Shoulder-to-shoulder taping</li>
+                <li> Double-stitched</li>
+                <li>American Apparel</li>
+            </ul>
+        </div>
+        <div class="product-size-desc">
+            <div class="size-guide-heading" onclick="showTable()">Size Guide</div>
+            <table class="size-table" id="show-table">
+
+                <tr>
+              
+                  <th></th>
+                  <th>XS</th>
+                  <th>S</th>
+                  <th>M</th>
+                  <th>L</th>
+                  <th>XL</th>
+                  <th>2XL</th>
+                  <th>3XL</th>
+              
+                </tr>
+              
+                <tr>
+              
+                  <th>Chest (inches)</th>
+                  <td>30-32</td>
+                  <td>34-36</td>
+                  <td>38-40</td>
+                  <td>42-44</td>
+                  <td>46-48</td>
+                  <td>48-50</td>
+                  <td>50-52</td>
+              
+                </tr>
+              
+                <tr>
+              
+                  <th>Waist (inches)</th>
+                  <td>28-30</td>
+                  <td>30-32</td>
+                  <td>32-33</td>
+                  <td>33-34</td>
+                  <td>36-38</td>
+                  <td>40-42</td>
+                  <td>44-48</td>
+              
+                </tr>
+              
+                <tr>
+              
+                  <th>Chest (cm)</th>
+                  <td>76-81</td>
+                  <td>86-91</td>
+                  <td>97-102</td>
+                  <td>107-112</td>
+                  <td>117-122</td>
+                  <td>122-127</td>
+                  <td>127-132</td>
+              
+                </tr>
+
+                <tr>
+              
+                    <th>Waist (cm)</th>
+                    <td>71-76</td>
+                    <td>76-81</td>
+                    <td>81-84</td>
+                    <td>84-86</td>
+                    <td>91-97</td>
+                    <td>102-107</td>
+                    <td>112-122</td>
+                
+                </tr>
+              
+              </table>
+        </div>
+    </div>
+</div>
+
+<div class="shopping-box">
+    <div class="shopping-shop animate-grow">
+      YOU MIGHT ALSO LIKE THIS
+    </div>
+</div>
+
+<div class="shopping-card-box">
+    {% for prod in shop_prod %}
+        <div class="shopping-card animate">
+            <ul>
+                {% if forloop.counter == 7 or forloop.counter == 8 or forloop.counter == 9 or forloop.counter == 11 %}
+                <li><a href="#" style="display:flex; justify-content:center"><img src='/media/{{prod.prod_img}}' style="width:70%;height: 100%;"></a></li>
+                
+                {% else %}
+                <li><a href="/shop/{{prod.prod_name}}"><img src='/media/{{prod.prod_img}}' style="width:100%;height: 100%;"></a></li>
+                {% endif %}
+                <li style="text-overflow: ellipsis; overflow: hidden; height: 6.5%;">{{prod.prod_name}}</li>
+                <li style="font-size: 1.1vw; font-weight: 100; color: grey;">{{prod.prod_color}}</li>
+                <li style="font-size: 1.3vw; font-weight: 100;">₹ {{prod.prod_cost}}</li>
+            </ul>
+        </div>
+    {% endfor %}
+</div>
+
+
+{% endblock %}
+
+{% block afterbody %} 
+
+{% endblock %}
+
+{% block javascript %} 
+
+<script>
+    function showTable(){
+        let show =document.getElementById("show-table")
+        let head =document.getElementsByClassName("size-guide-heading")
+        if (show.style.display == "none" || show.style.display == "" ) {
+            show.style.display = "inline-table";
+            head[0].innerHTML="Hide Size Guide"
+            
+        } else {
+            show.style.display = "none";
+            head[0].innerHTML="Size Guide"
+        }
+    }
+    function addShadow(x){
+        let ele = document.getElementsByClassName("product-img-option-ul")
+        ele = ele[0].children
+        // console.log(x.parentElement.className)
+        Array.from(ele).forEach(element => {
+            element.classList.remove('box-shadow')
+        });
+        x.parentElement.className += " box-shadow"
+        
+    }
+</script>
+
+{% endblock %}
