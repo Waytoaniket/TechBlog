@@ -14,6 +14,7 @@ class Product(models.Model):
         return self.prod_name
 
 class Video(models.Model):
+    vid_id = models.AutoField
     vid_img = models.ImageField(upload_to="video",default="")
     Vid_title = models.CharField(max_length=100)
     vid_link = models.CharField(max_length=500)

@@ -1,6 +1,6 @@
 from django.shortcuts import render,HttpResponse
 from .models import Product, Video, GamingProduct
-import math
+import math , random
 
 # Create your views here.
 def homepage(request):
@@ -16,6 +16,9 @@ def shoppage(request):
     return render(request,'shop.html',products)
 
 def productdetails(request,product_name):
+    shop=request.GET.py runserver
+    
+    print(shop)
     shop_prod = Product.objects.all()[:4]
     prod = Product.objects.get(prod_name=product_name)
     # print(shop_prod[0].prod_cost,"        hello")
@@ -25,13 +28,17 @@ def productdetails(request,product_name):
 def videopage(request):
     vid = Video.objects.all()
     # print(vid[0].Vid_title)
-    vids={'Vids':vid,'containers':range(0,math.ceil(len(vid)/4))}
+    vids={'Vids':vid}
     return render(request,'videos.html',vids)
 
-def videoplay(request):
-    vid = Video.objects.all()
+def videoplay(request,video_id):
+    x = random.randint(0,10)
+    vid = Video.objects.all()[x:x+4]
+    # print(video_name)
+    video = Video.objects.get(id=video_id)
+    # print(video.vid_link)
     # print(vid[0].Vid_title)
-    vids={'Vids':vid,'containers':range(0,math.ceil(len(vid)/4))}
+    vids={'Vids':vid,'video':video}
     return render(request,'videoplay.html',vids)
 
 

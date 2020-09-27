@@ -59,6 +59,19 @@ section{
     transform: scale(1.1);
 }
 
+
+/* ------------------------backgroung image------------------- */
+
+.changebackgroundimage{
+    background-image: none;
+}
+
+.changebackgroundimage:hover{
+    background-image: url("https://cdn.shopify.com/s/files/1/0309/9711/9108/t/3/assets/pf-5428c638--source.gif?v=1586897647");
+}
+.activebackgroud{
+    background-image: url("https://cdn.shopify.com/s/files/1/0309/9711/9108/t/3/assets/pf-5428c638--source.gif?v=1586897647");  
+}
 /* navigation */
 nav{
     display: grid;
@@ -259,7 +272,7 @@ nav{
 /* -----------------------video-section part-------------------- */
 .video-sec{
     width: 97%;
-    height: 24vw;
+    height: 25vw;
     background-color: #393e46;
     margin-block-start: 15px;
     margin-inline-start: 15px;
@@ -267,7 +280,7 @@ nav{
 }
 .video-heading{
     width: 100%;
-    height: 15%;
+    height: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -282,7 +295,7 @@ nav{
 }
 .video-box{
     width: 100%;
-    height: 85%;
+    height: 80%;
     display: flex;
 }
 .video-img{
@@ -602,7 +615,7 @@ nav{
     width: 98%;
     height: 16.5vw;
     display: flex;
-    margin-inline-start: 8px;
+    margin: auto;
     margin-block-end: 15px;
 }
 .video-card{
@@ -793,6 +806,34 @@ nav{
     }
 }
 
+.animate-on-selected:hover{
+    animation-name: pf-wobble-horizontal;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+}
+
+@keyframes  pf-wobble-horizontal {
+    16.65% {
+        transform: translateX(8px);
+    }
+    33.3% {
+        transform: translateX(-6px);
+    }
+    49.95% {
+        transform: translateX(4px);
+    }
+    66.6% {
+        transform: translateX(-2px);
+    }
+    83.25% {
+        transform: translateX(1px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
 .main-product-desc{
     width: 37.5%;
     height: 100%;
@@ -891,7 +932,6 @@ nav{
     margin: auto;
     margin-block-start: 2%;
     display: flex;
-    justify-content: space-around;
     background-color: #363b44;
   
 }
@@ -1117,4 +1157,20 @@ nav{
     color: white;
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
+}
+
+
+
+/* ------------------video play page--------------------------------------- */
+
+
+.videoplay-sec{
+    width: 97%;
+    height: 45vw;
+    margin: auto;
+    margin-block-start: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #363b44;
 }

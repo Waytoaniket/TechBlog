@@ -47,7 +47,7 @@
     <div class="jambo-text-btn">
         <ul>
             <li><a href="gaming-setup" class="animate-grow">GAMING SETUP</a></li>
-            <li><button class="jambo-btn animate-grow" onclick="location.href='gaming-setup'" >Visit Page</button></li>
+            <li><button class="jambo-btn animate-grow changebackgroundimage" onclick="location.href='gaming-setup'" >Visit Page</button></li>
         </ul>
     </div>
 </div>
@@ -58,7 +58,7 @@
   <div class="jambo-text-btn">
       <ul>
           <li><a href="custom-pc-build" class="animate-grow">PC BUILD</a></li>
-          <li><button class="jambo-btn animate-grow" onclick="location.href='custom-pc-build'">Visit Page</button></li>
+          <li><button class="jambo-btn animate-grow changebackgroundimage" onclick="location.href='custom-pc-build'">Visit Page</button></li>
       </ul>
   </div>
 </div>
@@ -69,7 +69,7 @@
     <div class="jambo-text-btn">
         <ul>
             <li><a href="racing-simulator" class="animate-grow">RACING SIM</a></li>
-            <li><button class="jambo-btn animate-grow" onclick="location.href='racing-simulator'">Visit Page</button></li>
+            <li><button class="jambo-btn animate-grow changebackgroundimage" onclick="location.href='racing-simulator'">Visit Page</button></li>
         </ul>
     </div>
 </div>
@@ -80,7 +80,7 @@
   <div class="jambo-text-btn">
       <ul>
           <li><a href="accessories" class="animate-grow">ACCESSORIES</a></li>
-          <li><button class="jambo-btn animate-grow" onclick="location.href='accessories'">Visit Page</button></li>
+          <li><button class="jambo-btn animate-grow changebackgroundimage" onclick="location.href='accessories'">Visit Page</button></li>
       </ul>
   </div>
 </div>
@@ -93,7 +93,7 @@
     {% for vids in vid %}
     <div class="video-img animate">
       <ul>
-        <li><a href="#"><img src="/media/{{vids.vid_img}}" style="width:100%;height: 100%;"></a></li>
+        <li><a href="/video/{{vids.id}}"><img src="/media/{{vids.vid_img}}" style="width:100%;height: 100%;"></a></li>
         <li>{{vids.Vid_title}}</li>
       </ul>
     </div>

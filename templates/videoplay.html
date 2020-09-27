@@ -7,9 +7,9 @@
 <div class="nav-bottom">
   <ul>
     <li class="animate-grow"><a href="/" onclick="changeActive()">HOME</a></li>
-    <li class="animate-grow nav-active" onclick="changeActive()"><a href="shop">SHOP</a></li>
-    <li class="animate-grow"><a href="gaming-setup" onclick="changeActive()">GAMING SETUP</a></li>
-    <li class="animate-grow"><a href="video" onclick="changeActive()">VIDEOS</a></li>
+    <li class="animate-grow" onclick="changeActive()"><a href="/shop">SHOP</a></li>
+    <li class="animate-grow"><a href="/gaming-setup" onclick="changeActive()">GAMING SETUP</a></li>
+    <li class="animate-grow"><a href="/video" onclick="changeActive()">VIDEOS</a></li>
     <li class="animate-grow"><a href="#" onclick="changeActive()">CONTACT US</a></li>
   </ul>
 </div>
@@ -18,52 +18,29 @@
 
 {% block body %} 
 
-<!-- -----------------slideshow------------------ -->
-<div class="slideshow-container">
+<div class="videoplay-sec">
+  <iframe width="100%" height="100%" src="{{video.vid_link}}">
+  </iframe>
+</div>   
 
-    <div class="mySlides fade">
-      <img src="/media/shop/shoppingSlide1.png" style="width:100%; object-fit: cover; height: 600px;">
-    </div>
-    
-    <div class="mySlides fade">
-      <img src="/media/shop/shoppingSlide2.png" style="width:100%; object-fit: cover;  height: 600px;">
-    </div>
-    
-    <div style="text-align:center;margin-top: -2%;">
-      <span class="dot"></span> 
-      <span class="dot"></span> 
-    </div>
-    
 </div>
   <!-- ------------------shopping------------------- -->
 <div class="shopping-box">
   <div class="shopping-shop animate-grow">
-    GET 10% OFF WITH DISCOUNT CODE: RBG
+    YOU MIGHT ALSO LIKE THIS
   </div>
 </div>
-
-<div class="shopping-card-box">
-  {% for prod in shop_prod %}
-      <div class="shopping-card animate">
-        <ul>
-            {% if forloop.counter == 7 or forloop.counter == 8 or forloop.counter == 9 or forloop.counter == 11 %}
-            <li><a href="#" style="display:flex; justify-content:center"><img src='/media/{{prod.prod_img}}' style="width:70%;height: 100%;"></a></li>
-            
-            {% else %}
-            <li><a href="#"><img src='/media/{{prod.prod_img}}' style="width:100%;height: 100%;"></a></li>
-            {% endif %}
-            <li style="text-overflow: ellipsis; overflow: hidden; height: 6.5%;">{{prod.prod_name}}</li>
-            <li style="font-size: 1.1vw; font-weight: 100; color: grey;">{{prod.prod_color}}</li>
-            <li style="font-size: 1.3vw; font-weight: 100;">₹ {{prod.prod_cost}}</li>
-        </ul>
-      </div>
-    {% if forloop.counter|divisibleby:4 and not forloop.last %}
+<div class="video-card-box">
+    {% for video in Vids %}
+    <div class="video-card animate">
+      <ul>
+        <li><a href="#"><img src="/media/{{video.vid_img}}" style="width:100%;height: 100%;"></a></li>
+        <li>{{video.Vid_title}}</li>
+      </ul>
     </div>
-    <div class="shopping-card-box">
-    {% endif %}
-  {% endfor %}
-</div>
- 
+    {% endfor %}
+  </div>
+  
  
 
 {% endblock %}
@@ -75,27 +52,5 @@
 {% endblock %}
 
 {% block javascript %} 
-
-<script>
-    var slideIndex = 0;
-    showSlides();
-    
-    function showSlides() {
-      var i;
-      var slides = document.getElementsByClassName("mySlides");
-      var dots = document.getElementsByClassName("dot");
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-      }
-      slideIndex++;
-      if (slideIndex > slides.length) {slideIndex = 1}    
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex-1].style.display = "block";  
-      dots[slideIndex-1].className += " active";
-      setTimeout(showSlides, 3000); // Change image every 2 seconds
-    }
-</script>
 
 {% endblock %}

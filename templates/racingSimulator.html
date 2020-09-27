@@ -20,17 +20,17 @@
 {% block body %} 
 
 <div class="gaming-head-box">
-    <div class="gaming-head animate-grow">
+    <div class="gaming-head animate-grow changebackgroundimage">
         <a href="gaming-setup">GAMING SETUP</a>
     </div> 
-    <div class="gaming-head animate-grow">
+    <div class="gaming-head animate-grow changebackgroundimage">
         <a href="custom-pc-build">CUSTOM PC BUILD</a>
        
     </div>
-    <div class="gaming-head animate-grow">
+    <div class="gaming-head animate-on-selected changebackgroundimage activebackgroud">
         <a href="racing-simulator">RACING SIMULATOR</a>
     </div> 
-    <div class="gaming-head animate-grow">
+    <div class="gaming-head animate-grow changebackgroundimage">
         <a href="accessories">ACCESSORIES</a>
     </div>
 </div>
@@ -43,10 +43,10 @@
             <ul class="main-product-link-ul">
                 <li style="font-weight: 600;">GT OMEGA RACING</li>
                 <li style="font-size: 14px;">Get <span style="text-decoration: underline;">5% off</span> by using the link below</li>
-                <li class="animate-grow">
+                <li class="animate-grow changebackgroundimage">
                     <a href="https://www.gtomega.com/?rfsn=2934046.83d96d">GT OMEGA RACING WEBSITE</a>
                 </li>
-                <li class="animate-grow">
+                <li class="animate-grow changebackgroundimage">
                     <a href="https://www.amazon.in/s?k=GT+Omega+Element+Series&tag=techblock07-21">on Amazon(Global)</a>
                 </li>
             </ul>
@@ -69,10 +69,10 @@
             <ul class="main-product-link-ul">
                 <li style="font-weight: 600;">VIVIFY CABLES</li>
                 <li style="font-size: 14px;">Code <span style="text-decoration: underline;">"TechBlock10"</span> for 10% off</li>
-                <li class="animate-grow">
+                <li class="animate-grow changebackgroundimage">
                     <a href="https://www.vivify.cc/">Vivify Cables Website</a>
                 </li>
-                <li class="animate-grow">
+                <li class="animate-grow changebackgroundimage">
                     <a href="https://www.amazon.in/s?k=vivify+arquus+w73+the+world%27s+first+fiber+optics+hdmi+2+0+console+gaming+rgb+light+up+4k+cable+9ft+dpl+hdmi+certified&tag=techblock07-21">on Amazon(Global)</a>
                 </li>
             </ul>
@@ -100,7 +100,7 @@
                     <ul class="norm-product-link-ul">
                         <li style="font-weight: 600;">{{gprod.gprod_name}}{{forloop.counter}}</li>
                         {% for i in prod %}
-                        <li class="animate-grow">
+                        <li class="animate-grow changebackgroundimage">
                             <a href="{{i.link}}">{{i.store}}</a>
                         </li>
                         {% endfor %}

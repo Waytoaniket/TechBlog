@@ -20,17 +20,17 @@
 {% block body %} 
 
 <div class="gaming-head-box">
-    <div class="gaming-head animate-grow">
+    <div class="gaming-head animate-grow changebackgroundimage">
         <a href="gaming-setup">GAMING SETUP</a>
     </div> 
-    <div class="gaming-head animate-grow">
+    <div class="gaming-head animate-grow changebackgroundimage">
         <a href="custom-pc-build">CUSTOM PC BUILD</a>
        
     </div>
-    <div class="gaming-head animate-grow">
+    <div class="gaming-head animate-grow changebackgroundimage">
         <a href="racing-simulator">RACING SIMULATOR</a>
     </div> 
-    <div class="gaming-head animate-grow">
+    <div class="gaming-head animate-on-selected changebackgroundimage activebackgroud">
         <a href="accessories">ACCESSORIES</a>
     </div>
 </div>
@@ -48,7 +48,7 @@
                     <ul class="norm-product-link-ul">
                         <li style="font-weight: 600;">{{gprod.gprod_name}}{{forloop.counter}}</li>
                         {% for i in prod %}
-                        <li class="animate-grow">
+                        <li class="animate-grow changebackgroundimage">
                             <a href="{{i.link}}">{{i.store}}</a>
                         </li>
                         {% endfor %}
